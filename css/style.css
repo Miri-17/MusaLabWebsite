@@ -1,0 +1,139 @@
+@charset "UTF-8";
+
+/* COMMON
+------------------------------ */
+html {
+    font-size: 100%;
+}
+body {
+    font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", sans-serif;
+    line-height: 1.7;
+    color: #333333;
+}
+a {
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+}
+
+/* HEADER
+------------------------------ */
+.header {
+    padding: 10px 0;
+    background-color: #ddd; /* 確かめ用 */
+}
+.gnav {
+    display: flex;
+    justify-content: center;
+}
+.gnav-list {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    list-style: none;
+    align-items: center;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+}
+.gnav-link {
+    display: block;
+    color: #616062;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px 20px;
+    flex-grow: 1;
+}
+.gnav-list img {
+    width: 210px;
+}
+/* .black {
+    background-color: #000;
+} */
+
+/* header {
+    display: flex;
+}
+
+<img src>のところについてたクラス
+.logo {
+    width: 210px;
+    margin-top: 14px;
+}
+
+.main-nav {
+    display: flex;
+    font-size: 0.95rem;
+    list-style: none;
+}
+.main-nav a {
+    color: #616062;
+}
+.main-nav a:hover {
+    color: #0e0e0e;
+} */
+
+/* .container {
+    display: flex;
+    justify-content: space-between;
+}
+.item {
+    background: #0bd;
+} */
+
+/* HOME
+------------------------------ */
+#home {
+    background-image: url(../images/build-crush.jpg);
+    min-height: 100vh;
+}
+
+.sentence {
+    margin: 20px 50px;
+}
+/* TODO 後で細かい線のサイズ変更 */
+.caption {
+    border-bottom: 2px solid #0bd;
+
+    font-family: "M PLUS 1p", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.button {
+    font-size: 1.375rem;
+    background: #000;
+    color: #fff;
+    border-radius: 5px;
+    padding: 18px 32px;
+}
+.button:hover {
+    background: #0090aa;
+}
+
+/* FOOTER
+------------------------------ */
+footer {
+    background: #000;
+    text-align: center;
+    padding: 26px 0;
+}
+footer p {
+    color: #fff;
+    font-size: 0.875rem;
+}
+.icon-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    /* 画像が表示されなかった時のためにfont-sizeも念の為指定した */
+    font-size: 1.25rem;
+    list-style: none;
+}
+.icon {
+    width: 45px;
+    /* インスタグラムのロゴは周囲にその1/2の余白をつける必要有り */
+    margin: 24px;
+}
