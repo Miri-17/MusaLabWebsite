@@ -215,14 +215,15 @@ HEADER
 }
 
 /*
-HERO
+SLIDER
 ================================================ */
-.hero {
-    margin-top: 3.7rem;
+.slider {
+    /* margin-top: 3.7rem; */
+    margin-top: 2rem;
 
     background: var(--main-blue);
 }
-.hero img {
+.slider img {
     width: 100%;
 }
 
@@ -643,6 +644,7 @@ MEDIUM SIZE
         max-width: 1000px;
         padding: 0 3rem;
         margin-top: 7rem;
+        /* margin-top: 1rem; */
     }
 
     /* HEADER */
@@ -769,4 +771,8 @@ LARGE SIZE
     .search .post-list {
         grid-template-columns: repeat(3, 1fr);
     }
+}
+
+.slider {
+    margin-top: 6rem;
 }
