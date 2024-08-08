@@ -8,13 +8,17 @@ COLORS
     --white: #fff;
     --black: #000;
     --grey: #666;
-    --moon-white: #F6F7F8;
-    --main-blue: #02BBFF;
-    --main-green: #02FF00;
-    --main-yellow: #FDD001;
-    --main-red: #FF0005;
-
     --light-grey: #ccc;
+    --moon-white: #f6f7f8;
+    /* サイトのメインカラー */
+    --main-blue: #02bbff;
+    --main-green: #02ff00;
+    --main-yellow: #fdd001;
+    --main-red: #ff0005;
+    /* ホバーに関する色 */
+    --dark-green: #1f8e83;
+    --orange: #faa61a;
+
     --dark-grey: #707070;
     --green: #7bba93;
     --dark-blue: #39565C;
@@ -341,18 +345,19 @@ SINGLE / PAGE ARTICLE
     padding-bottom: 1rem;
 }
 .post-content a {
-    color: var(--green);
+    color: var(--dark-green);
     text-decoration: underline;
 }
 .post-content a:hover {
-    color: var(--dark-blue);
+    color: var(--orange);
 }
 .post-content h2 {
     font-size: var(--font-lg);
     /* background: url(images/leaf-left.svg) left top/24px 28px no-repeat; */
     border-bottom: 4px double var(--light-grey);
     /* padding: 0 .5rem .75rem 2rem; */
-    padding: 0 .5rem .75rem 0;
+    padding: 0 .5rem .5rem .5rem;
+    /* padding: 0 .5rem .75rem 0; */
     margin: 3rem 0 .5rem;
 }
 .post-content h3 {
@@ -401,7 +406,7 @@ SINGLE / PAGE ARTICLE
     line-height: 1.5;
 }
 .post-content li::marker {
-    color: var(--green);
+    color: var(--dark-green);
 }
 .post-content blockquote {
     background: #eee;
@@ -431,11 +436,12 @@ SINGLE / PAGE ARTICLE
         border-radius: 3px;
         margin: 0 3px;
 }
+
 /*
 BLOCK
 ================================================ */
 .wp-caption {
-max-width: 100%;
+    max-width: 100%;
 }
 a.wp-block-button__link {
     color: var(--white);
@@ -493,7 +499,7 @@ TAG LIST
     margin-right: .25rem;
 }
 .tags-links a:hover {
-    color: var(--green);
+    color: var(--orange);
 }
 
 /*
@@ -520,10 +526,10 @@ textarea {
 }
 input[type="submit"] {
     padding: .75rem 1rem .85rem;
-    background: var(--green);
+    background: var(--orange);
     border-radius: var(--round-xs);
     color: var(--white);
-    box-shadow: 0 4px 10px rgba(123, 186, 147, .6);
+    box-shadow: 0 4px 10px rgba(186, 152, 123, 0.6);
 }
 
 /*
@@ -586,33 +592,37 @@ h3#reply-title {
 FOOTER
 ================================================ */
 .site-footer {
-    /* background: url(images/footer.svg)center/cover; */
-    background: var(--black);
     text-align: center;
+    background: var(--black);
     color: var(--white);
-    padding: 5rem 0 3rem;
     margin-top: 2rem;
+    padding: 0 0 3rem;
 }
-.copyright {
-    font-size: var(--font-sm);
-    color: rgba(255,255,255,.6)
+.page-top {
+    display: flex;
+    justify-content: flex-end;
 }
-
-
-/* add */
+.arrow-up {
+    padding: 5px;
+    height: 60px;
+    width: 60px;
+}
 .icon-list {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    /* 画像が表示されなかった時のためにfont-sizeも念の為指定した */
-    font-size: 1.25rem;
+    font-size: var(--font-sm);
     list-style: none;
 }
 .icon {
     width: 45px;
     /* インスタグラムのロゴは周囲にその1/2の余白をつける必要有り */
     margin: 24px;
+}
+.copyright {
+    font-size: var(--font-sm);
+    color: rgba(255, 255, 255, .8);
 }
 
 /*
