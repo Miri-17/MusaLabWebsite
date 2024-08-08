@@ -215,6 +215,18 @@ HEADER
 }
 
 /*
+HERO
+================================================ */
+.hero {
+    margin-top: 3.7rem;
+
+    background: var(--main-blue);
+}
+.hero img {
+    width: 100%;
+}
+
+/*
 MAIN
 ================================================ */
 .main-contents {
@@ -305,7 +317,9 @@ POST LIST
     transition: .2s;
 }
 
-/* Archive */
+/*
+ARCHIVE
+================================================ */
 .archive-title {
     text-align: center;
     border-bottom: 3px solid var(--main-green);
@@ -644,6 +658,11 @@ MEDIUM SIZE
         width: 200px;
     }
 
+    /* HERO */
+    .hero {
+        margin-top: 5.5rem;
+    }
+
     /* Global Navigation */
     .gnav {
         display: flex;
@@ -675,14 +694,14 @@ MEDIUM SIZE
         display: none;
     }
 
-    /* Post List */
+    /* POST LIST */
     .home .post-list,
     .archive .post-list,
     .search .post-list {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    /* Archive */
+    /* ARCHIVE */
     .archive-title {
         font-size: var(--font-xl);
         margin-bottom: 2rem;
