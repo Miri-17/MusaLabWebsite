@@ -1,71 +1,490 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
-    <head>
-        <meta charset="UTF-8">
-        <title>ムサビゲームラボ ホームページ</title>
-        <meta name="description" content="武蔵野美術大学の公認サークル、ムサビゲームラボについてご紹介">
-        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@800&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="css/style.css">
-        <script src="js/script.js" defer></script>
-        <link rel="icon" type="image/png" href="images/favicon.png">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ムサビゲームラボ</title>
+    <link rel="icon" href="images/favicon.png" type="image/png">
 
-    <body>
-        <!-- 仮ヘッダ. 文字とか画像以外で反応しない→いっそのことボタンをフレックスに並べるべきかも知れん -->
-        <header class="header">
-            <nav class="gnav">
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/destyle.css@2.0.2/destyle.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="home">
+    <header class="site-header">
+        <div class="site-logo">
+            <a href="#">
+                <img src="images/logo.png" alt="ムサビゲームラボ">
+            </a>
+        </div>
+        <div>
+            <input id="nav-input" class="nav-hidden" type="checkbox">
+            <label class="btn-menu" for="nav-input">
+                <span class="btn-menu-line"></span>
+            </label>
+            <nav class="gnav" id="gnav">
                 <ul class="gnav-list">
-                    <li><a class="gnav-link" href="index.html"><img src="images/musalab_logo_white.png" alt="ムサビゲームラボ ホーム"></a></li>
-                    <li><a class="gnav-link" href="introduction.html">ムサビゲームラボとは？</a></li>
-                    <li><a class="gnav-link" href="games.html">ゲーム紹介<br>ダウンロード</a></li>
-                    <li><a class="gnav-link" href="news.html">ニュース</a></li>
-                    <li><a class="gnav-link" href="gallery.html">ギャラリー</a></li>
+                    <li class="gnav-item"><a class="gnav-link main-blue" href="#">ムサビゲームラボとは？</a></li>
+                    <li class="gnav-item"><a class="gnav-link main-green" href="#">制作ゲーム</a></li>
+                    <li class="gnav-item"><a class="gnav-link main-yellow" href="#">ニュース</a></li>
+                    <li class="gnav-item"><a class="gnav-link main-red" href="#">ギャラリー</a></li>
                 </ul>
             </nav>
-        </header>
-        
-        <section id="home"></section>
+        </div>
+    </header>
 
-        <!-- TODO クラス名ダサいので変えろ(CSSも) -->
-        <div class="sentence">
-            <h1 class="caption">ムサビゲームラボとは？</h1>
-            <p>ムサビゲームラボは、2022年に武蔵野美術大学で立ち上げられた非公認のゲーム制作サークルです！</p>
-            <p>現在、60人ほどのメンバーが在籍しています。</p>
-            <h2>活動内容</h2>
+    <main class="main-contents wrapper">
+        <!-- post-contentクラスじゃなくす -->
+        <!-- CSSの設定を「 .main-contents h2　{...}」にすると思う -->
+        <div class="post-content">
+            <h2>ムサビゲームラボとは？</h2>
+            <p>
+                ムサビゲームラボは、2022年に武蔵野美術大学で立ち上げられた非公認のゲーム制作サークルです！<br>
+                現在、60人ほどのメンバーが在籍しています。
+            </p>
+            <p><strong>活動内容</strong></p>
             <ul>
                 <li>自分の作りたいゲームを制作することができます！</li>
-                <li>分業制で制作をしているので、イラスト、UI、サウンド、アニメーションなど、参加したいゲームに部分的に参加することも可能です！</li>
-                <li>サークル内には、みんなでゲームをプレイする「ムサビゲームパーク」という集まりもあり、そこで他学科の人たちとも交流することができます！</li>
+                <li>ゲームはプロジェクトごとに分業制で制作しており、自分の得意な分野・伸ばしたい分野を担当することができます！</li>
+                <li>サークル内には「ムサビゲームパーク」という集まりもあり、ゲームをしながらいろいろな人と交流できます！</li>
             </ul>
-            <a class="button" href="index.html">詳細を見る</a>
-            
-            <h1 class="caption">ゲーム紹介 / ダウンロード</h1>
-            <a class="button" href="games.html">ゲーム一覧へ</a>
-            
-            <h1 class="caption">ニュース</h1>
-            <a class="button" href="news.html">ニュース一覧へ</a>
-            
-            <h1 class="caption">ギャラリー</h1>
-            <a class="button" href="news.html">もっと見る</a>
+            <p>
+                リンク例を示します<a href="#">リンク例</a>。
+            </p>
+            <figure class="wp-block-image">
+                <img src="images/OGPImage.jpg" alt="写真を使う例">
+                <figcaption>キャプション例</figcaption>
+            </figure>
+            <h3>H3の例</h3>
+            <ul>
+                <li>unordered リスト1</li>
+                <li>unordered リスト2</li>
+                <li>unordered リスト3</li>
+            </ul>
+            <blockquote>
+                <p>引用文の例。</p>
+            </blockquote>
         </div>
         
+        <div class="nav-links">
+            <a href="#" class="btn-gradient-border">
+                <span class="btn-gradient-border__text">詳細を見る</span>
+            </a>
+        </div>
         
-        <footer>
-            <div>
-                <!-- TODO ロゴの位置任天堂のホームページのように左端に配置（ページ上部と同じ）に -->
-                <a href="index.html"><img class="logo" src="images/musalab_logo_white.png" alt="ムサビゲームラボ ホーム"></a>
-                <!-- TODO 任天堂のホームページのようにページ上部にスムースに移動するボタンを配置 -->
-                <ul class="icon-list">
-                    <li class="icon"><a href="https://x.com/MusabiGameLab"><img src="images/x_icon_white.png" alt="X"></a></li>
-                    <li class="icon"><a href="https://instagram.com/musabigamelab"><img src="images/instagram_icon_white.png" alt="Instagram"></a></li>
-                    <li class="icon"><a href="https://youtube.com/@musabigamelab"><img src="images/youtube_icon_white.png" alt="YouTube"></a></li>
-                    <li class="icon"><a href="mailto:MusabiGameLab@gmail.com"><img src="images/mail_icon_white.png" alt="メール"></a></li>
-                </ul>
-                <p><small>&copy; 2024 ムサビゲームラボ</small></p>
-            </div>
-        </footer>
-    </body>
+        <div class="post-content">
+            <h2>制作ゲーム</h2>
+        </div>
+        <div class="post-list">
+            <article class="post-item">
+                <a href="#">
+                    <img src="images/tmb-deuzia.jpg" alt="" class="wp-post-image">
+                </a>
+                <header class="post-header">
+                    <h2 class="post-title">
+                        <a href="#">デューツィア劇場からの脱出あああああああああああああああああああああああ</a>
+                    </h2>
+                    <!-- <time class="post-date" datetime="2022-12-31">2022年12月31日</time> -->
+                    <!-- <ul class="post-categories">
+                        <li><a href="#">オーガニックフード</a></li>
+                    </ul> -->
+                    <p class="post-description">
+                        容疑者は11人の劇場関係者。会話が脱出の鍵になる！あああああああああああああああああああ
+                    </p>
+                    <div class="tags-links">
+                        <ul>
+                            <li><a href="#">アドベンチャー</a></li>
+                            <li><a href="#">謎解き</a></li>
+                            <li><a href="#">脱出</a></li>
+                        </ul>
+                    </div>
+                </header>
+            </article>
+            <article class="post-item">
+                <a href="#">
+                    <img src="images/tmb-butterfly.jpg" alt="" class="wp-post-image">
+                </a>
+                <header class="post-header">
+                    <h2 class="post-title">
+                        <a href="#">デューツィア劇場からの脱出</a>
+                    </h2>
+                    <!-- <time class="post-date" datetime="2022-12-31">2022年12月31日</time> -->
+                    <!-- <ul class="post-categories">
+                        <li><a href="#">インテリア</a></li>
+                    </ul> -->
+                    <p class="post-description">
+                        容疑者は11人の劇場関係者。会話が脱出の鍵になる！
+                    </p>
+                    <div class="tags-links">
+                        <ul>
+                            <li><a href="#">アドベンチャー</a></li>
+                            <li><a href="#">謎解き</a></li>
+                            <li><a href="#">脱出</a></li>
+                        </ul>
+                    </div>
+                </header>
+            </article>
+            <article class="post-item">
+                <a href="#">
+                    <img src="images/tmb-miko.jpg" alt="" class="wp-post-image">
+                </a>
+                <header class="post-header">
+                    <h2 class="post-title">
+                        <a href="#">デューツィア劇場からの脱出</a>
+                    </h2>
+                    <!-- <time class="post-date" datetime="2022-12-31">2022年12月31日</time> -->
+                    <!-- <ul class="post-categories">
+                        <li><a href="#">アウトドアグッズ</a></li>
+                    </ul> -->
+                    <p class="post-description">
+                        容疑者は11人の劇場関係者。会話が脱出の鍵になる！
+                    </p>
+                    <div class="tags-links">
+                        <ul>
+                            <li><a href="#">アドベンチャー</a></li>
+                            <li><a href="#">謎解き</a></li>
+                            <li><a href="#">脱出</a></li>
+                        </ul>
+                    </div>
+                </header>
+            </article>
+            <article class="post-item">
+                <a href="#">
+                    <img src="images/tmb-rover.jpg" alt="" class="wp-post-image">
+                </a>
+                <header class="post-header">
+                    <h2 class="post-title">
+                        <a href="#">デューツィア劇場からの脱出</a>
+                    </h2>
+                    <!-- <time class="post-date" datetime="2022-12-31">2022年12月31日</time> -->
+                    <!-- <ul class="post-categories">
+                        <li><a href="#">インテリア</a></li>
+                    </ul> -->
+                    <p class="post-description">
+                        容疑者は11人の劇場関係者。会話が脱出の鍵になる！
+                    </p>
+                    <div class="tags-links">
+                        <ul>
+                            <li><a href="#">アドベンチャー</a></li>
+                            <li><a href="#">謎解き</a></li>
+                            <li><a href="#">脱出</a></li>
+                        </ul>
+                    </div>
+                </header>
+            </article>
+            <article class="post-item">
+                <a href="#">
+                    <img src="images/tmb-little-hero-the-mind.jpg" alt="" class="wp-post-image">
+                </a>
+                <header class="post-header">
+                    <h2 class="post-title">
+                        <a href="#">デューツィア劇場からの脱出</a>
+                    </h2>
+                    <!-- <time class="post-date" datetime="2022-12-31">2022年12月31日</time> -->
+                    <!-- <ul class="post-categories">
+                        <li><a href="#">オーガニックフード</a></li>
+                    </ul> -->
+                    <p class="post-description">
+                        容疑者は11人の劇場関係者。会話が脱出の鍵になる！
+                    </p>
+                    <div class="tags-links">
+                        <ul>
+                            <li><a href="#">アドベンチャー</a></li>
+                            <li><a href="#">謎解き</a></li>
+                            <li><a href="#">脱出</a></li>
+                        </ul>
+                    </div>
+                </header>
+            </article>
+            <article class="post-item">
+                <a href="#">
+                    <img src="images/tmb-henshin.jpg" alt="" class="wp-post-image">
+                </a>
+                <header class="post-header">
+                    <h2 class="post-title">
+                        <a href="#">デューツィア劇場からの脱出</a>
+                    </h2>
+                    <!-- <time class="post-date" datetime="2022-12-31">2022年12月31日</time> -->
+                    <!-- <ul class="post-categories">
+                        <li><a href="#">ヒーリング</a></li>
+                    </ul> -->
+                    <p class="post-description">
+                        容疑者は11人の劇場関係者。会話が脱出の鍵になる！
+                    </p>
+                    <div class="tags-links">
+                        <ul>
+                            <li><a href="#">アドベンチャー</a></li>
+                            <li><a href="#">謎解き</a></li>
+                            <li><a href="#">脱出</a></li>
+                        </ul>
+                    </div>
+                </header>
+            </article>
+        </div>
+
+        <div class="nav-links">
+            <a href="#" class="btn-gradient-border">
+                <span class="btn-gradient-border__text">制作ゲーム一覧へ</span>
+            </a>
+        </div>
+        <!-- <div class="nav-links">
+            <a href="#">制作ゲーム一覧へ</a>
+        </div> -->
+
+        <div class="post-content">
+            <h2>ニュース</h2>
+        </div>
+        <div class="post-list">
+            <article class="post-item">
+                <a href="#">
+                    <img src="images/tmb-default-news.jpg" alt="" class="wp-post-image">
+                </a>
+                <header class="post-header">
+                    <h2 class="post-title">
+                        <a href="#">Webサイト開設！ サイトの内容紹介</a>
+                    </h2>
+                    <time class="post-date" datetime="2023-12-31">2023年12月31日</time>
+                    <!-- <ul class="post-categories">
+                        <li><a href="#">オーガニックフード</a></li>
+                    </ul> -->
+                    <div class="tags-links">
+                        <ul>
+                            <li><a href="#">Web更新情報</a></li>
+                            <li><a href="#">タグなし</a></li>
+                        </ul>
+                    </div>
+                </header>
+            </article>
+            <article class="post-item">
+                <a href="#">
+                    <img src="images/tmb-default-news.jpg" alt="" class="wp-post-image">
+                </a>
+                <header class="post-header">
+                    <h2 class="post-title">
+                        <a href="#">Webサイト開設！ サイトの内容紹介</a>
+                    </h2>
+                    <time class="post-date" datetime="2023-12-31">2023年12月31日</time>
+                    <!-- <ul class="post-categories">
+                        <li><a href="#">オーガニックフード</a></li>
+                    </ul> -->
+                    <div class="tags-links">
+                        <ul>
+                            <li><a href="#">Web更新情報</a></li>
+                            <li><a href="#">タグなし</a></li>
+                        </ul>
+                    </div>
+                </header>
+            </article>
+            <article class="post-item">
+                <a href="#">
+                    <img src="images/tmb-default-news.jpg" alt="" class="wp-post-image">
+                </a>
+                <header class="post-header">
+                    <h2 class="post-title">
+                        <a href="#">Webサイト開設！ サイトの内容紹介</a>
+                    </h2>
+                    <time class="post-date" datetime="2023-12-31">2023年12月31日</time>
+                    <!-- <ul class="post-categories">
+                        <li><a href="#">オーガニックフード</a></li>
+                    </ul> -->
+                    <div class="tags-links">
+                        <ul>
+                            <li><a href="#">Web更新情報</a></li>
+                            <li><a href="#">タグなし</a></li>
+                        </ul>
+                    </div>
+                </header>
+            </article>
+            <article class="post-item">
+                <a href="#">
+                    <img src="images/tmb-default-news.jpg" alt="" class="wp-post-image">
+                </a>
+                <header class="post-header">
+                    <h2 class="post-title">
+                        <a href="#">Webサイト開設！ サイトの内容紹介</a>
+                    </h2>
+                    <time class="post-date" datetime="2023-12-31">2023年12月31日</time>
+                    <!-- <ul class="post-categories">
+                        <li><a href="#">オーガニックフード</a></li>
+                    </ul> -->
+                    <div class="tags-links">
+                        <ul>
+                            <li><a href="#">Web更新情報</a></li>
+                            <li><a href="#">タグなし</a></li>
+                        </ul>
+                    </div>
+                </header>
+            </article>
+            <article class="post-item">
+                <a href="#">
+                    <img src="images/tmb-default-news.jpg" alt="" class="wp-post-image">
+                </a>
+                <header class="post-header">
+                    <h2 class="post-title">
+                        <a href="#">Webサイト開設！ サイトの内容紹介</a>
+                    </h2>
+                    <time class="post-date" datetime="2023-12-31">2023年12月31日</time>
+                    <!-- <ul class="post-categories">
+                        <li><a href="#">オーガニックフード</a></li>
+                    </ul> -->
+                    <div class="tags-links">
+                        <ul>
+                            <li><a href="#">Web更新情報</a></li>
+                            <li><a href="#">タグなし</a></li>
+                        </ul>
+                    </div>
+                </header>
+            </article>
+            <article class="post-item">
+                <a href="#">
+                    <img src="images/tmb-default-news.jpg" alt="" class="wp-post-image">
+                </a>
+                <header class="post-header">
+                    <h2 class="post-title">
+                        <a href="#">Webサイト開設！ サイトの内容紹介</a>
+                    </h2>
+                    <time class="post-date" datetime="2023-12-31">2023年12月31日</time>
+                    <!-- <ul class="post-categories">
+                        <li><a href="#">オーガニックフード</a></li>
+                    </ul> -->
+                    <div class="tags-links">
+                        <ul>
+                            <li><a href="#">Web更新情報</a></li>
+                            <li><a href="#">タグなし</a></li>
+                        </ul>
+                    </div>
+                </header>
+            </article>
+        </div>
+
+        <div class="nav-links">
+            <a href="#" class="btn-gradient-border">
+                <span class="btn-gradient-border__text">ニュース一覧へ</span>
+            </a>
+        </div>
+        <!-- <div class="nav-links">
+            <a href="#">ニュース一覧へ</a>
+        </div> -->
+
+        <div class="post-content">
+            <h2>ギャラリー</h2>
+        </div>
+        <div class="post-list">
+            <article class="post-item">
+                <a href="#">
+                    <img src="images/tmb-deuzia.jpg" alt="" class="wp-post-image">
+                </a>
+                <header class="post-header">
+                    <!-- <h2 class="post-title">
+                        <a href="#">デューツィア劇場からの脱出</a>
+                    </h2> -->
+                    <!-- <time class="post-date" datetime="2022-12-31">2022年12月31日</time> -->
+                    <!-- <ul class="post-categories">
+                        <li><a href="#">オーガニックフード</a></li>
+                    </ul> -->
+                </header>
+            </article>
+            <article class="post-item">
+                <a href="#">
+                    <img src="images/tmb-butterfly.jpg" alt="" class="wp-post-image">
+                </a>
+                <header class="post-header">
+                    <!-- <h2 class="post-title">
+                        <a href="#">デューツィア劇場からの脱出</a>
+                    </h2> -->
+                    <!-- <time class="post-date" datetime="2022-12-31">2022年12月31日</time> -->
+                    <!-- <ul class="post-categories">
+                        <li><a href="#">インテリア</a></li>
+                    </ul> -->
+                </header>
+            </article>
+            <article class="post-item">
+                <a href="#">
+                    <img src="images/tmb-miko.jpg" alt="" class="wp-post-image">
+                </a>
+                <header class="post-header">
+                    <!-- <h2 class="post-title">
+                        <a href="#">デューツィア劇場からの脱出</a>
+                    </h2> -->
+                    <!-- <time class="post-date" datetime="2022-12-31">2022年12月31日</time> -->
+                    <!-- <ul class="post-categories">
+                        <li><a href="#">アウトドアグッズ</a></li>
+                    </ul> -->
+                </header>
+            </article>
+            <article class="post-item">
+                <a href="#">
+                    <img src="images/tmb-rover.jpg" alt="" class="wp-post-image">
+                </a>
+                <header class="post-header">
+                    <!-- <h2 class="post-title">
+                        <a href="#">デューツィア劇場からの脱出</a>
+                    </h2> -->
+                    <!-- <time class="post-date" datetime="2022-12-31">2022年12月31日</time> -->
+                    <!-- <ul class="post-categories">
+                        <li><a href="#">インテリア</a></li>
+                    </ul> -->
+                </header>
+            </article>
+            <article class="post-item">
+                <a href="#">
+                    <img src="images/tmb-little-hero-the-mind.jpg" alt="" class="wp-post-image">
+                </a>
+                <header class="post-header">
+                    <!-- <h2 class="post-title">
+                        <a href="#">デューツィア劇場からの脱出</a>
+                    </h2> -->
+                    <!-- <time class="post-date" datetime="2022-12-31">2022年12月31日</time> -->
+                    <!-- <ul class="post-categories">
+                        <li><a href="#">オーガニックフード</a></li>
+                    </ul> -->
+                </header>
+            </article>
+            <article class="post-item">
+                <a href="#">
+                    <img src="images/tmb-henshin.jpg" alt="" class="wp-post-image">
+                </a>
+                <header class="post-header">
+                    <!-- <h2 class="post-title">
+                        <a href="#">デューツィア劇場からの脱出</a>
+                    </h2> -->
+                    <!-- <time class="post-date" datetime="2022-12-31">2022年12月31日</time> -->
+                    <!-- <ul class="post-categories">
+                        <li><a href="#">ヒーリング</a></li>
+                    </ul> -->
+                </header>
+            </article>
+        </div>
+
+        <div class="nav-links">
+            <a href="#" class="btn-gradient-border">
+                <span class="btn-gradient-border__text">もっと見る</span>
+            </a>
+        </div>
+        <!-- <div class="nav-links">
+            <a href="#">もっと見る</a>
+        </div> -->
+    </main>
+
+    <footer class="site-footer">
+        <div class="site-logo">
+            <a href="#">
+                <img src="images/logo.png" alt="ムサビゲームラボ">
+            </a>
+        </div>
+        <ul class="icon-list">
+            <li class="icon"><a href="https://x.com/MusabiGameLab"><img src="images/icon-x.png" alt="X"></a></li>
+            <li class="icon"><a href="https://instagram.com/musabigamelab"><img src="images/icon-instagram.png" alt="Instagram"></a></li>
+            <li class="icon"><a href="https://youtube.com/@musabigamelab"><img src="images/icon-youtube.png" alt="YouTube"></a></li>
+            <li class="icon"><a href="mailto:MusabiGameLab@gmail.com"><img src="images/icon-mail.png" alt="メール"></a></li>
+        </ul>
+
+        <p class="copyright">&copy; 2024 ムサビゲームラボ</p>
+    </footer>
+
+    <!-- Script -->
+    <script src="js/script.js"></script>
+    <!--追加script-->
+</body>
 </html>
