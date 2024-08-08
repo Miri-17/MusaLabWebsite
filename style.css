@@ -311,9 +311,13 @@ POST LIST
 }
 
 /* Archive */
-.page-title {
-    margin-bottom: 1.5rem;
+.archive-title {
     text-align: center;
+    border-bottom: 3px solid var(--main-green);
+    font-size: var(--font-lg);
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    padding: 0 0 5px;
 }
 
 /*
@@ -686,7 +690,7 @@ MEDIUM SIZE
     }
     
     /* Archive */
-    .page-title {
+    .archive-title {
         font-size: var(--font-xl);
         margin-bottom: 2rem;
     }
