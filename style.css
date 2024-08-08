@@ -218,13 +218,72 @@ HEADER
 SLIDER
 ================================================ */
 .slider {
-    /* margin-top: 3.7rem; */
-    margin-top: 2rem;
-
-    background: var(--main-blue);
+    margin-top: 60px; /* .site-headerの高さと同じ */
+    /* 確認用 */
+    /* background: var(--main-blue); */
 }
 .slider img {
     width: 100%;
+}
+
+/* Arrows */
+.slick-arrow {
+    z-index: 2;
+}
+.slick-prev,
+.slick-next {
+    width: 40px;
+    height: 40px;
+}
+.slick-prev {
+    left: 0;
+}
+.slick-next {
+    right: 0;
+}
+.slick-prev::before,
+.slick-next::before {
+    font-size: 40px;
+    color: var(--orange);
+    opacity: .75;
+}
+.slick-prev::before:hover,
+.slick-next::before:hover {
+    opacity: 1;
+    transition: .3s;
+}
+
+/* Dots */
+.slide-dots {
+    position: relative;
+    text-align: center;
+    margin: -15px 0 0 0;
+}
+.slide-dots li {
+    display: inline-block;
+    margin: 0 12px;
+}
+.slide-dots li button {
+    position: relative;
+    text-indent: -9999px;
+}
+.slide-dots li button::before {
+    content: '';
+    position: absolute;
+    background: var(--light-grey);
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: auto;
+    height: 12px;
+    width: 12px;
+    top: 24px;
+    right: 0;
+    left: 0;
+}
+.slide-dots li.slick-active button::before {
+    background: var(--orange);
 }
 
 /*
@@ -232,7 +291,10 @@ MAIN
 ================================================ */
 .main-contents {
     margin-bottom: 3rem;
-    margin-top: 5rem;
+    /* margin-top: 5rem; */
+}
+.h2_top{
+    margin-top: 5rem !important;
 }
 
 /*
@@ -257,6 +319,7 @@ POST LIST
     height: auto;
     width: 100%;
     object-fit: cover;
+    margin-top: 5rem;
 }
 .post-item:hover {
     box-shadow: 0 0 10px rgba(0,0,0,.16);
@@ -297,13 +360,13 @@ POST LIST
 }
 .btn-gradient-border {
     display: inline-block;
-    background: var(--grey);
+    background: var(--dark-green);
     border-radius: var(--round-md);
     padding: 3px;
 }
 .btn-gradient-border__text {
     display: block;
-    background: var(--grey);
+    background: var(--dark-green);
     border-radius: var(--round-sm);
     padding: .85rem 1rem;
     color: var(--white);
@@ -643,8 +706,13 @@ MEDIUM SIZE
     .wrapper {
         max-width: 1000px;
         padding: 0 3rem;
-        margin-top: 7rem;
+        /* margin-top: 7rem; */
         /* margin-top: 1rem; */
+    }
+
+    /* add */
+    .h2_top{
+        margin-top: 7rem !important;
     }
 
     /* HEADER */
@@ -660,9 +728,20 @@ MEDIUM SIZE
         width: 200px;
     }
 
-    /* HERO */
-    .hero {
-        margin-top: 5.5rem;
+    /* SLIDER */
+    .slider {
+        margin-top: 90px; /* .site-headerの高さと同じ */
+    }
+
+    /* Arrows */
+    .slick-prev,
+    .slick-next {
+        width: 60px;
+        height: 60px;
+    }
+    .slick-prev::before,
+    .slick-next::before {
+        font-size: 60px;
     }
 
     /* Global Navigation */
@@ -710,6 +789,9 @@ MEDIUM SIZE
     }
 
     /* SINGLE / PAGE ARTICLE */
+    .post-item .wp-post-image {
+        margin-top: 7rem;
+    }
     .single .post-header {
         padding: 4rem 3rem 2rem;
     }
@@ -771,8 +853,4 @@ LARGE SIZE
     .search .post-list {
         grid-template-columns: repeat(3, 1fr);
     }
-}
-
-.slider {
-    margin-top: 6rem;
 }
