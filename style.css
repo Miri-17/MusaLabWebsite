@@ -18,16 +18,6 @@ COLORS
     /* ホバーに関する色 */
     --dark-green: #1f8e83;
     --orange: #faa61a;
-
-    --dark-grey: #707070;
-    --green: #7bba93;
-    --dark-blue: #39565C;
-    /* --pale-yellow: #F9F9F4; */
-
-    /* add */
-    --link-color: #349bf4;
-    --main-color: #dd1b57;
-    --text-color: #333;
     
     /* Font/Space Size */
     --font-sm: .75rem;
@@ -93,6 +83,7 @@ HEADER
     width: 140px;
 }
 
+/* Global Navigation */
 .gnav {
     display: none;
     background: var(--black);
@@ -116,6 +107,7 @@ HEADER
     color: var(--white);
     padding-bottom: 5px;
     position: relative;
+    text-decoration: none;
     opacity: .8;
     transition-duration: .3s;
 }
@@ -226,8 +218,6 @@ HEADER
 MAIN
 ================================================ */
 .main-contents {
-    /* TODO 確認用を使ってbuttonとかとの位置関係確認 */
-    /* background: var(--main-red); */
     margin-bottom: 3rem;
     margin-top: 5rem;
 }
@@ -255,9 +245,10 @@ POST LIST
     width: 100%;
     object-fit: cover;
 }
+.post-item:hover {
+    box-shadow: 0 0 10px rgba(0,0,0,.16);
+}
 .post-header {
-    /* TODO 確認用 */
-    /* background: var(--main-blue); */
     padding: 1rem;
 }
 .post-title {
@@ -327,6 +318,10 @@ POST LIST
 /*
 SINGLE / PAGE ARTICLE
 ================================================ */
+.single .post-item:hover,
+.page .post-item:hover {
+    box-shadow: none;
+}
 .single .post-title,
 .page .post-title {
     font-size: var(--font-lg);
@@ -572,7 +567,7 @@ h3#reply-title {
     padding-left: 3.5rem;
 }
 .comment-body p a {
-    color: var(--green);
+    color: var(--dark-green);
     text-decoration: underline;
 }
 /* Comment form */
@@ -629,63 +624,27 @@ FOOTER
 MEDIUM SIZE
 ================================================ */
 @media(min-width: 600px) {
-/* LAYOUT  */
+    /* LAYOUT  */
     .wrapper {
         max-width: 1000px;
         padding: 0 3rem;
         margin-top: 7rem;
     }
 
-/* HEADER */
+    /* HEADER */
     .site-header {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        padding: 20px 20px;
         height: 90px;
-        padding: 30px 70px;
     }
-
-    /* .site-title {
-        margin-bottom: 2rem;
-    } */
     .site-logo {
-        line-height: 1;
+        margin-right: 35px;
+        width: 200px;
     }
 
-    .site-description {
-        font-size: var(--font-md);
-    }
-
-    /*--------------------------------
-    グローバルナビ
-    ---------------------------------*/
-    .gnav-list {
-        display: flex;
-        position: relative;
-        align-items: center;
-        column-gap: 30px;
-        flex-direction: row;
-        padding: 0;
-        width: auto;
-        row-gap: 0;
-    }
-    .gnav-item {
-        font-size: 16px;
-        font-weight: bold;
-        line-height: 1;
-        letter-spacing: 0.05em;
-    }
-    .gnav-link {
-        color: var(--text-color);
-        text-decoration: none;
-    }
-    .gnav-link:hover {
-        color: var(--main-color);
-    }
-    .gnav-link--active {
-        color: white;
-        font-size: 12px;
-    }
+    /* Global Navigation */
     .gnav {
         display: flex;
         position: static; /* 固定位置を解除 */
@@ -695,46 +654,41 @@ MEDIUM SIZE
         box-shadow: none;
         justify-content: center;
     }
+    .gnav-list {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        position: relative;
+        padding: 0;
+        width: auto;
+        row-gap: 0;
+        column-gap: 30px;
+    }
+    .gnav-item {
+        font-size: var(--font-md);
+        font-weight: bold;
+        line-height: 1;
+        letter-spacing: 0.05em;
+    }
+
     .btn-menu {
         display: none;
     }
-    
+
+    /* Post List */
+    .home .post-list,
+    .archive .post-list,
+    .search .post-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     /* Archive */
     .archive-title {
         font-size: var(--font-xl);
         margin-bottom: 2rem;
     }
 
-/* MAIN */
-    .home .post-list,
-    .archive .post-list,
-    .search .post-list {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-    }
-    .post-item:hover {
-        box-shadow: 0 0 10px rgba(0,0,0,.16);
-    }
-    .post-categories li:hover {
-        background: var(--dark-grey);
-    }
-    .nav-links a:hover {
-        background: var(--dark-blue);
-        box-shadow: 0 4px 10px rgba(57, 86, 92, .6);
-    }
-    .post-item .wp-post-image {
-        aspect-ratio: 4 / 3;
-    }
-
-/* SINGLE / PAGE ARTICLE */
-    .single .post-item .wp-post-image,
-    .page .post-item .wp-post-image {
-        aspect-ratio: 16 / 9;
-    }
-    .single .post-item:hover,
-    .page .post-item:hover {
-        box-shadow: none;
-    }
+    /* SINGLE / PAGE ARTICLE */
     .single .post-header {
         padding: 4rem 3rem 2rem;
     }
@@ -748,9 +702,6 @@ MEDIUM SIZE
     .single .post-title,
     .page .post-title {
         font-size: var(--font-xl);
-    }
-    .post-content {
-        padding-bottom: 2rem;
     }
     .post-content h2 {
         font-size: var(--font-xl);
@@ -788,13 +739,7 @@ MEDIUM SIZE
     .post-footer {
         padding-bottom: 3rem;
     }
-
-/* FOOTER */
-    .site-footer {
-        padding: 9rem 0 5rem;
-    }
 }
-
 
 /*
 LARGE SIZE
@@ -804,8 +749,5 @@ LARGE SIZE
     .archive .post-list,
     .search .post-list {
         grid-template-columns: repeat(3, 1fr);
-    }
-    .gnav-link--active {
-        font-size: 15px; /* 1000px以上でのフォントサイズ */
     }
 }
