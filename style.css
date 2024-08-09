@@ -18,6 +18,8 @@ COLORS
     /* ホバーに関する色 */
     --dark-green: #1f8e83;
     --orange: #faa61a;
+    /* 付箋のようなh2の色 */
+    --extra-light-grey: #f7f7f7;
     
     /* Font/Space Size */
     --font-sm: .75rem;
@@ -422,15 +424,72 @@ SINGLE / PAGE ARTICLE
 .post-content a:hover {
     color: var(--orange);
 }
+
 .post-content h2 {
+    background: var(--extra-light-grey);
+    border-left: solid 6px var(--orange);
+    color: var(--orange);
     font-size: var(--font-lg);
-    /* background: url(images/leaf-left.svg) left top/24px 28px no-repeat; */
-    border-bottom: 4px double var(--light-grey);
-    /* padding: 0 .5rem .75rem 2rem; */
-    padding: 0 .5rem .5rem .5rem;
-    /* padding: 0 .5rem .75rem 0; */
     margin: 3rem 0 .5rem;
+    padding: .5rem;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.14);
 }
+.post-content #main-blue,
+.post-content #main-green,
+.post-content #main-yellow,
+.post-content #main-red {
+    /* main-blueタグの付いていないもののデザインを打ち消し */
+    border-left: none;
+    background: none;
+    box-shadow: none;
+
+    border-bottom: 4px solid var(--main-blue);
+    color: var(--grey);
+    position: relative;
+    padding-left: 3rem;
+    align-items: center;
+}
+.post-content #main-green {
+    border-bottom: 4px solid var(--main-green);
+}
+.post-content #main-green {
+    border-bottom: 4px solid var(--main-green);
+}
+.post-content #main-yellow {
+    border-bottom: 4px solid var(--main-yellow);
+}
+.post-content #main-red {
+    border-bottom: 4px solid var(--main-red);
+}
+.post-content #main-blue::before,
+.post-content #main-green::before,
+.post-content #main-yellow::before,
+.post-content #main-red::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+}
+.post-content #main-blue::before {
+    background-image: url(images/button-m.png);
+}
+.post-content #main-green::before {
+    background-image: url(images/button-a.png);
+}
+.post-content #main-yellow::before {
+    background-image: url(images/button-k.png);
+}
+.post-content #main-red::before {
+    background-image: url(images/button-e.png);
+}
+
 .post-content h3 {
     font-size: var(--font-lg);
     margin-top: 2rem;
@@ -775,9 +834,6 @@ MEDIUM SIZE
     }
 
     /* SINGLE / PAGE ARTICLE */
-    /* .post-item .wp-post-image {
-        margin-top: 7rem;
-    } */
     .single .post-header {
         padding: 4rem 3rem 2rem;
     }
@@ -795,6 +851,13 @@ MEDIUM SIZE
     .post-content h2 {
         font-size: var(--font-xl);
         margin-bottom: 1rem;
+    }
+    .post-content #main-blue::before,
+    .post-content #main-green::before,
+    .post-content #main-yellow::before,
+    .post-content #main-red::before {
+        width: 45px;
+        height: 45px;
     }
     .post-content h3 {
         font-size: var(--font-xl);
