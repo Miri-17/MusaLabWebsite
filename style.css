@@ -244,16 +244,16 @@ SLIDER
 .slick-next {
     right: 0;
 }
-.slick-prev::before,
-.slick-next::before {
+.slider .slick-prev::before,
+.slider .slick-next::before {
     font-size: 40px;
     color: var(--orange);
-    opacity: .75;
+    opacity: 0;
+    transition: .5s;
 }
-.slick-prev::before:hover,
-.slick-next::before:hover {
+.slider:hover .slick-prev::before,
+.slider:hover .slick-next::before {
     opacity: 1;
-    transition: .3s;
 }
 
 /* Dots */
@@ -728,17 +728,6 @@ MEDIUM SIZE
     .slider {
         /* sliderはヘッダーの真下に配置したいため、ヘッダーの下の余白30pxを削除 */
         margin-top: -30px;
-    }
-
-    /* Arrows */
-    .slick-prev,
-    .slick-next {
-        width: 60px;
-        height: 60px;
-    }
-    .slick-prev::before,
-    .slick-next::before {
-        font-size: 60px;
     }
 
     /* Global Navigation */
