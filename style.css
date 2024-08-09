@@ -389,8 +389,30 @@ ARCHIVE
     border-bottom: 3px solid var(--main-green);
     font-size: var(--font-lg);
     font-weight: bold;
-    margin-bottom: 1.5rem;
+    margin-bottom: .5rem;
     padding: 0 0 5px;
+}
+
+/* Search */
+.search-wrap {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+}
+#search-text{
+    background: var(--white) url("images/icon-search.svg") no-repeat 14px center;
+    background-size: 30px 30px;
+    border: .2rem solid var(--dark-green);
+    outline: none;
+    height: 60px;
+    width: 60px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+#search-text:focus {
+    width: 250px;
+    border: .2rem solid var(--orange);
+    padding: 20px 0 20px 60px;
 }
 
 /*
@@ -830,7 +852,12 @@ MEDIUM SIZE
     /* ARCHIVE */
     .archive-title {
         font-size: var(--font-xl);
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    /* Search */
+    #search-text:focus {
+        width: 500px;
     }
 
     /* SINGLE / PAGE ARTICLE */
