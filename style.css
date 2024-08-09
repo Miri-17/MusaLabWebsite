@@ -68,6 +68,11 @@ LAYOUT
 /*
 HEADER
 ================================================ */
+.header_empty {
+    /* ヘッダー (60px) の下に20px余白を追加 */
+    height: 80px;
+    width: 100%;
+}
 .site-header {
     background: var(--black);
     height: 60px;
@@ -78,7 +83,6 @@ HEADER
     position: fixed;
     top: 0;
 }
-
 .site-logo {
     width: 140px;
 }
@@ -218,9 +222,8 @@ HEADER
 SLIDER
 ================================================ */
 .slider {
-    margin-top: 60px; /* .site-headerの高さと同じ */
-    /* 確認用 */
-    /* background: var(--main-blue); */
+    /* sliderはヘッダーの真下に配置したいため、ヘッダーの下の余白20pxを削除 */
+    margin-top: -20px;
 }
 .slider img {
     width: 100%;
@@ -291,10 +294,6 @@ MAIN
 ================================================ */
 .main-contents {
     margin-bottom: 3rem;
-    /* margin-top: 5rem; */
-}
-.h2_top{
-    margin-top: 5rem !important;
 }
 
 /*
@@ -319,7 +318,6 @@ POST LIST
     height: auto;
     width: 100%;
     object-fit: cover;
-    margin-top: 5rem;
 }
 .post-item:hover {
     box-shadow: 0 0 10px rgba(0,0,0,.16);
@@ -706,13 +704,11 @@ MEDIUM SIZE
     .wrapper {
         max-width: 1000px;
         padding: 0 3rem;
-        /* margin-top: 7rem; */
-        /* margin-top: 1rem; */
     }
 
-    /* add */
-    .h2_top{
-        margin-top: 7rem !important;
+    .header_empty {
+        /* ヘッダー (90px) の下に30px余白を追加 */
+        height: 120px;
     }
 
     /* HEADER */
@@ -730,7 +726,8 @@ MEDIUM SIZE
 
     /* SLIDER */
     .slider {
-        margin-top: 90px; /* .site-headerの高さと同じ */
+        /* sliderはヘッダーの真下に配置したいため、ヘッダーの下の余白30pxを削除 */
+        margin-top: -30px;
     }
 
     /* Arrows */
@@ -789,9 +786,9 @@ MEDIUM SIZE
     }
 
     /* SINGLE / PAGE ARTICLE */
-    .post-item .wp-post-image {
+    /* .post-item .wp-post-image {
         margin-top: 7rem;
-    }
+    } */
     .single .post-header {
         padding: 4rem 3rem 2rem;
     }
