@@ -415,6 +415,16 @@ ARCHIVE
     padding: 20px 0 20px 60px;
 }
 
+/* Scroll Tag */
+.scroll-tag {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 0.8rem;
+    margin-bottom: 1rem;
+    scrollbar-width: thin;
+    scrollbar-color: var(--dark-green) var(--light-grey);
+}
+
 /*
 SINGLE / PAGE ARTICLE
 ================================================ */
@@ -587,6 +597,13 @@ SINGLE / PAGE ARTICLE
         padding: 3px;
         border-radius: 3px;
         margin: 0 3px;
+}
+
+.author-name {
+    margin: 0 1.2rem .5rem 1.2rem;
+}
+.author-name p {
+    text-align: right;
 }
 
 /*
@@ -917,6 +934,10 @@ MEDIUM SIZE
     }
     .post-footer {
         padding-bottom: 3rem;
+    }
+
+    .author-name {
+        margin: 0 3rem .5rem 3rem;
     }
 }
 

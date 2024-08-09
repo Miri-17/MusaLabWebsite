@@ -1,3 +1,4 @@
+// index.html
 // Slider
 $('.slider').on('breakpoint', function(breakpoint) {
     // デバッグ用
@@ -31,6 +32,7 @@ $('.slider').slick({
     }]
 });
 
+// 全て
 // ページのトップへスクロール
 $('#arrow-up').click(function () {
     $('body, html').animate({
@@ -38,3 +40,16 @@ $('#arrow-up').click(function () {
     }, 500); //ページトップスクロールの速さ
     return false; //リンク自体の無効化
 });
+
+// archive.html
+function handleFocus() {
+    this.placeholder = 'キーワードで検索！';
+}
+function handleBlur() {
+    this.placeholder = '';
+    this.value = '';
+}
+
+const searchText = document.getElementById('search-text');
+searchText.addEventListener('focus', handleFocus);
+searchText.addEventListener('blur', handleBlur);
