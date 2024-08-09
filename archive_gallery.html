@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="archive">
@@ -38,7 +39,7 @@
     <div class="header_empty"></div>
 
     <main class="main-contents wrapper">
-        <h1 class="archive-title">制作ゲーム</h1>
+        <h1 class="archive-title">ギャラリー</h1>
 
         <div class="search-wrap">
             <form role="search" method="get" action="">
@@ -46,7 +47,7 @@
             </form>
         </div>
 
-        <div class="scroll-tag">
+        <!-- <div class="scroll-tag">
             <div class="tags-links">
                 <ul>
                     <li class="horizontal-item"><a href="#">アドベンチャー</a></li>
@@ -60,171 +61,88 @@
                     <li class="horizontal-item"><a href="#">脱出</a></li>
                 </ul>
             </div>
-        </div>
-        <!-- <div class="tags-links">
-            <ul>
-                <li class="horizontal-item"><a href="#">アドベンチャー</a></li>
-                <li class="horizontal-item"><a href="#">謎解き</a></li>
-                <li class="horizontal-item"><a href="#">脱出</a></li>
-                <li class="horizontal-item"><a href="#">アドベンチャー</a></li>
-                <li class="horizontal-item"><a href="#">謎解き</a></li>
-                <li class="horizontal-item"><a href="#">脱出</a></li>
-                <li class="horizontal-item"><a href="#">アドベンチャー</a></li>
-                <li class="horizontal-item"><a href="#">謎解き</a></li>
-                <li class="horizontal-item"><a href="#">脱出</a></li>
-            </ul>
         </div> -->
-        <!-- <div class="scroll-tag">
-            <span>
-            </span>
-        </div> -->
+        <ul class="btn-sort"> 
+            <li>
+                <dl>
+                    <!-- <dt>All</dt> -->
+                    <dd>
+                        <ul>
+                            <li class="all active">全て</li>
+                        </ul>
+                    </dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>発表年</dt>
+                    <dd>
+                        <ul>
+                            <li class="color01">2022</li> 
+                            <li class="color02">2023</li>
+                            <li class="color03">2024</li>
+                        </ul>
+                    </dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>ジャンル</dt>
+                    <dd>
+                        <ul>
+                            <li class="cat01">育成</li>
+                            <li class="cat02">パズル</li>
+                            <li class="cat03">シューティング</li> 
+                            <li class="cat01">育成</li>
+                            <li class="cat02">パズル</li>
+                            <li class="cat03">シューティング</li> 
+                        </ul>
+                    </dd>
+                </dl>
+            </li>
+        </ul> 
 
-        <div class="post-list">
-            <article class="post-item">
-                <a href="#">
-                    <img src="images/tmb-deuzia.jpg" alt="" class="wp-post-image">
-                </a>
-                <header class="post-header">
-                    <h2 class="post-title">
-                        <a href="#">デューツィア劇場からの脱出あああああああああああああああああああああああ</a>
-                    </h2>
-                    <!-- <time class="post-date" datetime="2022-12-31">2022年12月31日</time> -->
-                    <!-- <ul class="post-categories">
-                        <li><a href="#">オーガニックフード</a></li>
-                    </ul> -->
-                    <p class="post-description">
-                        容疑者は11人の劇場関係者。会話が脱出の鍵になる！あああああああああああああああああああ
-                    </p>
-                    <div class="tags-links">
-                        <ul>
-                            <li><a href="#">アドベンチャー</a></li>
-                            <li><a href="#">謎解き</a></li>
-                            <li><a href="#">脱出</a></li>
-                        </ul>
-                    </div>
-                </header>
-            </article>
-            <article class="post-item">
-                <a href="#">
-                    <img src="images/tmb-butterfly.jpg" alt="" class="wp-post-image">
-                </a>
-                <header class="post-header">
-                    <h2 class="post-title">
-                        <a href="#">デューツィア劇場からの脱出</a>
-                    </h2>
-                    <!-- <time class="post-date" datetime="2022-12-31">2022年12月31日</time> -->
-                    <!-- <ul class="post-categories">
-                        <li><a href="#">インテリア</a></li>
-                    </ul> -->
-                    <p class="post-description">
-                        容疑者は11人の劇場関係者。会話が脱出の鍵になる！
-                    </p>
-                    <div class="tags-links">
-                        <ul>
-                            <li><a href="#">アドベンチャー</a></li>
-                            <li><a href="#">謎解き</a></li>
-                            <li><a href="#">脱出</a></li>
-                        </ul>
-                    </div>
-                </header>
-            </article>
-            <article class="post-item">
-                <a href="#">
-                    <img src="images/tmb-miko.jpg" alt="" class="wp-post-image">
-                </a>
-                <header class="post-header">
-                    <h2 class="post-title">
-                        <a href="#">デューツィア劇場からの脱出</a>
-                    </h2>
-                    <!-- <time class="post-date" datetime="2022-12-31">2022年12月31日</time> -->
-                    <!-- <ul class="post-categories">
-                        <li><a href="#">アウトドアグッズ</a></li>
-                    </ul> -->
-                    <p class="post-description">
-                        容疑者は11人の劇場関係者。会話が脱出の鍵になる！
-                    </p>
-                    <div class="tags-links">
-                        <ul>
-                            <li><a href="#">アドベンチャー</a></li>
-                            <li><a href="#">謎解き</a></li>
-                            <li><a href="#">脱出</a></li>
-                        </ul>
-                    </div>
-                </header>
-            </article>
-            <article class="post-item">
-                <a href="#">
-                    <img src="images/tmb-rover.jpg" alt="" class="wp-post-image">
-                </a>
-                <header class="post-header">
-                    <h2 class="post-title">
-                        <a href="#">デューツィア劇場からの脱出</a>
-                    </h2>
-                    <!-- <time class="post-date" datetime="2022-12-31">2022年12月31日</time> -->
-                    <!-- <ul class="post-categories">
-                        <li><a href="#">インテリア</a></li>
-                    </ul> -->
-                    <p class="post-description">
-                        容疑者は11人の劇場関係者。会話が脱出の鍵になる！
-                    </p>
-                    <div class="tags-links">
-                        <ul>
-                            <li><a href="#">アドベンチャー</a></li>
-                            <li><a href="#">謎解き</a></li>
-                            <li><a href="#">脱出</a></li>
-                        </ul>
-                    </div>
-                </header>
-            </article>
-            <article class="post-item">
-                <a href="#">
-                    <img src="images/tmb-little-hero-the-mind.jpg" alt="" class="wp-post-image">
-                </a>
-                <header class="post-header">
-                    <h2 class="post-title">
-                        <a href="#">デューツィア劇場からの脱出</a>
-                    </h2>
-                    <!-- <time class="post-date" datetime="2022-12-31">2022年12月31日</time> -->
-                    <!-- <ul class="post-categories">
-                        <li><a href="#">オーガニックフード</a></li>
-                    </ul> -->
-                    <p class="post-description">
-                        容疑者は11人の劇場関係者。会話が脱出の鍵になる！
-                    </p>
-                    <div class="tags-links">
-                        <ul>
-                            <li><a href="#">アドベンチャー</a></li>
-                            <li><a href="#">謎解き</a></li>
-                            <li><a href="#">脱出</a></li>
-                        </ul>
-                    </div>
-                </header>
-            </article>
-            <article class="post-item">
-                <a href="#">
-                    <img src="images/tmb-henshin.jpg" alt="" class="wp-post-image">
-                </a>
-                <header class="post-header">
-                    <h2 class="post-title">
-                        <a href="#">デューツィア劇場からの脱出</a>
-                    </h2>
-                    <!-- <time class="post-date" datetime="2022-12-31">2022年12月31日</time> -->
-                    <!-- <ul class="post-categories">
-                        <li><a href="#">ヒーリング</a></li>
-                    </ul> -->
-                    <p class="post-description">
-                        容疑者は11人の劇場関係者。会話が脱出の鍵になる！
-                    </p>
-                    <div class="tags-links">
-                        <ul>
-                            <li><a href="#">アドベンチャー</a></li>
-                            <li><a href="#">謎解き</a></li>
-                            <li><a href="#">脱出</a></li>
-                        </ul>
-                    </div>
-                </header>
-            </article>
-        </div>
+        <ul class="grid">
+            <!-- このクラスで検索する -->
+            <li class="item cat01 color01">
+                <!-- 高さ保持用 -->
+                <div class="item-content">
+                    <!-- data-fancyboxに半角英数字を入れてグループ名をつけると、ポップアップした後に同じキャプションを見せて一覧表示ができる -->
+                    <!-- キャプションはdata-captionに書く -->
+                    <a href="images/button-a.png" data-fancybox="group1" data-caption="グループ1キャプション">
+                        <img src="images/button-a.png" alt="">
+                    </a>
+                </div>
+            </li>
+            <li class="item cat01 cat02 color01">
+                <div class="item-content">
+                    <a href="images/tmb-butterfly.jpg" data-fancybox="group2" data-caption="グループ2キャプション">
+                        <img src="images/tmb-butterfly.jpg" alt="">
+                    </a>
+                </div>
+            </li>
+            <li class="item cat03 color02">
+                <div class="item-content">
+                    <a href="images/tmb-deuzia.jpg" data-fancybox="group3" data-caption="グループ3キャプション">
+                        <img src="images/tmb-deuzia.jpg" alt="">
+                    </a>
+                </div>
+            </li>
+            <li class="item cat03 color02">
+                <div class="item-content">
+                    <a href="images/tmb-default-news.jpg" data-fancybox="group3" data-caption="グループ3キャプション">
+                        <img src="images/tmb-default-news.jpg" alt="">
+                    </a>
+                </div>
+            </li>
+            <li class="item cat03 color02">
+                <div class="item-content">
+                    <a href="images/tmb-default.jpg" data-fancybox="group3" data-caption="グループ3キャプション">
+                        <img src="images/tmb-default.jpg" alt="">
+                    </a>
+                </div>
+            </li>
+        </ul>
 
         <div class="nav-links">
             <a href="#" class="btn-gradient-border">
@@ -256,9 +174,15 @@
     <!-- jQuery-->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/web-animations-js@2.3.2/web-animations.min.js"></script>
     <!-- slick -->
     <script src="js/slick.min.js"></script>
+    <!-- Muuri -->
+    <script src="https://cdn.jsdelivr.net/npm/muuri@0.9.5/dist/muuri.min.js"></script>
+    <!-- fancybox -->
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
     <!-- Script -->
+    <script src="js/gallery.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

@@ -42,14 +42,18 @@ $('#arrow-up').click(function () {
 });
 
 // archive.html
-function handleFocus() {
-    this.placeholder = 'キーワードで検索！';
-}
-function handleBlur() {
-    this.placeholder = '';
-    this.value = '';
-}
+window.addEventListener('load', function() {    
+    function handleFocus() {
+        this.placeholder = 'キーワードで検索！';
+    }
+    function handleBlur() {
+        this.placeholder = '';
+        this.value = '';
+    }
 
-const searchText = document.getElementById('search-text');
-searchText.addEventListener('focus', handleFocus);
-searchText.addEventListener('blur', handleBlur);
+    const searchText = document.getElementById('search-text');
+    if (!searchText) { return false; }
+    
+    searchText.addEventListener('focus', handleFocus);
+    searchText.addEventListener('blur', handleBlur);
+});
