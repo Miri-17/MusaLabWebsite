@@ -3,23 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="共通ディスクリプション">
     <title>個別記事｜ムサビゲームラボ</title>
-    <link rel="icon" href="./assets/images/common/favicon.png" type="image/png">
+    <link rel="icon" href="./assets/images/favicon.png" type="image/png">
 
     <!-- CSS -->
     <link rel="stylesheet" href="https://unpkg.com/destyle.css@2.0.2/destyle.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
-    <link rel="stylesheet" type="text/css" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 <body class="single">
     <header class="site-header">
         <div class="site-logo">
             <a href="#">
-                <img src="./assets/images/common/logo.png" alt="ムサビゲームラボ">
+                <img src="./assets/images/logo.png" alt="ムサビゲームラボ">
             </a>
         </div>
         <div>
@@ -33,7 +31,15 @@
                     <li class="gnav-item"><a class="gnav-link main-green" href="#">制作ゲーム</a></li>
                     <li class="gnav-item"><a class="gnav-link main-yellow" href="#">ニュース</a></li>
                     <li class="gnav-item"><a class="gnav-link main-red" href="#">ギャラリー</a></li>
+                    
                 </ul>
+                
+                <div class="header-search-wrap">
+                    <form role="search" method="get" action="">
+                        <input type="text" value="" name="" id="header-search-text" placeholder="">
+                    </form>
+                </div>
+
             </nav>
         </div>
     </header>
@@ -42,15 +48,12 @@
     <main class="main-contents wrapper">
         <div class="post-list">
             <article class="post-item">
-                <img src="images/tmb-default-news.jpg" alt="" class="wp-post-image">
+                <img src="./assets/images/tmb-default-news.jpg" alt="" class="wp-post-image">
                 <header class="post-header">
                     <h1 class="post-title">
                         Webサイト開設！ サイトの内容をご紹介&#x2728;
                     </h1>
                     <time class="post-date" datetime="2023-12-31">2023年12月31日</time>
-                    <!-- <ul class="post-categories">
-                        <li><a href="#">オーガニックフード</a></li>
-                    </ul> -->
                 </header>
                 <div class="post-content wrapper">
                     <p>
@@ -71,7 +74,7 @@
                         「どんなゲームを作っているのか知りたい！」という方は<a href="#">こちらから</a>どうぞ！
                     </p>
                     <figure class="wp-block-image">
-                        <img src="images/tmb-butterfly.jpg" alt="写真を使う例">
+                        <img src="./assets/images/tmb-default.jpg" alt="写真を使う例">
                         <figcaption>キャプション例</figcaption>
                     </figure>
                     <h2>ニュース</h2>
@@ -109,13 +112,11 @@
                         Code example: <code>push()</code> is a function.
                     </p>
                 </div>
-                <!--
-                php: the_author() 
-                https://thewppress.com/libraries/get-the-author/ 
-                -->
+
                 <div class="author-name">
                     <p>edited by 高村檸檬</p>
                 </div>
+                
                 <footer class="post-footer wrapper">
                     <div class="tags-links">
                         <ul>
@@ -132,33 +133,26 @@
         <div class="page-top">
             <div id="arrow-up" class="arrow-up">
                 <a href="#">
-                    <img src="images/arrow-up.png" alt="Page Top">
+                    <img src="./assets/images/arrow-up.svg" alt="Page Top">
                 </a>
             </div>
         </div>
         <ul class="icon-list">
-            <li class="icon"><a href="https://x.com/MusabiGameLab"><img src="images/icon-x.svg" alt="X"></a></li>
-            <li class="icon"><a href="https://instagram.com/musabigamelab"><img src="images/icon-instagram.svg" alt="Instagram"></a></li>
-            <li class="icon"><a href="https://youtube.com/@musabigamelab"><img src="images/icon-youtube.png" alt="YouTube"></a></li>
-            <li class="icon"><a href="mailto:MusabiGameLab@gmail.com"><img src="images/icon-mail.svg" alt="メール"></a></li>
+            <li class="icon"><a href="https://x.com/MusabiGameLab"><img src="./assets/images/icon-x.svg" alt="X"></a></li>
+            <li class="icon"><a href="https://instagram.com/musabigamelab"><img src="./assets/images/icon-instagram.svg" alt="Instagram"></a></li>
+            <li class="icon"><a href="https://youtube.com/@musabigamelab"><img src="./assets/images/icon-youtube.svg" alt="YouTube"></a></li>
+            <li class="icon"><a href="mailto:MusabiGameLab@gmail.com"><img src="./assets/images/icon-mail.svg" alt="メール"></a></li>
         </ul>
         <p class="copyright">&copy; 2024 ムサビゲームラボ</p>
     </footer>
 
     <!-- jQuery-->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- Galleryを使わないところで読み込むとエラー -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/web-animations-js@2.3.2/web-animations.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <!-- slick -->
-    <script type="text/javascript" src="./assets/js/slick.min.js"></script>
-    <!-- Galleryを使わないところで読み込むとエラー -->
-    <!-- Muuri -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/muuri@0.9.5/dist/muuri.min.js"></script> -->
-    <!-- fancybox -->
-    <!-- <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script> -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <!-- Script -->
-    <!-- <script type="text/javascript" src="./assets/js/gallery.js"></script> -->
-    <script type="text/javascript" src="./assets/js/script.js"></script>
+    <script src="./assets/js/image-slider.js"></script>
+    <script src="./assets/js/search.js"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>
