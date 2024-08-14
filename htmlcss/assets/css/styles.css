@@ -1337,15 +1337,16 @@ MEDIUM SIZE 1
     .single .post-header {
         padding: 4rem 3rem 2rem;
     }
-    .page .post-header {
+    /* .page .post-header {
         padding: 2rem 3rem;
-    }
+    } */
     .single .wp-post-image + .post-header,
     .page .wp-post-image + .post-header {
         padding-top: 2rem;
     }
-    .single .post-title,
-    .page .post-title {
+    /* .single .post-title, */
+    /* .page .post-title { */
+    .single .post-title {
         font-size: var(--font-xl);
     }
     .page-content h2,
@@ -1507,6 +1508,7 @@ LARGE SIZE
 @media(min-width: 1000px){
     .home .post-list,
     .archive .post-list,
+    .making-games .post-list,
     .search .post-list {
         grid-template-columns: repeat(3, 1fr);
     }
