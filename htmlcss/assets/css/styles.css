@@ -344,6 +344,7 @@ POST LIST
 ================================================ */
 .home .post-list,
 .archive .post-list,
+.making-games .post-list,
 .search .post-list {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -442,6 +443,14 @@ ARCHIVE
     font-weight: bold;
     /* margin: 1.5rem 0; */
     margin: 1.5rem 0 1rem;
+    padding: 0 0 5px;
+}
+.page-making-games-title {
+    text-align: center;
+    border-bottom: 3px solid var(--main-green);
+    font-size: var(--font-lg);
+    font-weight: bold;
+    margin-bottom: 1.5rem;
     padding: 0 0 5px;
 }
 
@@ -1304,12 +1313,17 @@ MEDIUM SIZE 1
     /* POST LIST */
     .home .post-list,
     .archive .post-list,
+    .making-games .post-list,
     .search .post-list {
         grid-template-columns: repeat(2, 1fr);
     }
 
     /* ARCHIVE */
     .archive-title {
+        font-size: var(--font-xl);
+        margin-bottom: 2rem;
+    }
+    .page-making-games-title {
         font-size: var(--font-xl);
         margin-bottom: 2rem;
     }
