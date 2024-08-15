@@ -715,6 +715,19 @@ SINGLE / PAGE ARTICLE
     text-align: right;
 }
 
+/* 次の記事、前の記事リンク */
+.more-news {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem .5rem 0;
+}
+.another-link {
+    color: var(--purple);
+}
+.another-link:hover {
+    color: var(--orange);
+}
+
 /*
 BLOCK
 ================================================ */
@@ -801,6 +814,10 @@ textarea {
     border: 1px solid var(--light-grey);
     border-radius: var(--round-xs);
     padding: .5rem;
+}
+.submit-button {
+    display: flex;
+    justify-content: center;
 }
 input[type="submit"] {
     padding: .75rem 1rem .85rem;
@@ -949,30 +966,41 @@ SEARCH
 .search-title {
     font-size: var(--font-xl);
     margin: 1rem 0 .5rem;
-    /* margin: 1rem 0 1rem; */
 }
 .search-list {
     border-top: .2rem solid var(--grey);
     margin: .5rem 0 1.5rem;
-    /* margin: 1rem 0 1.5rem; */
 }
-.search-item {
+.search-link {
+    position: relative;
+}
+.search-link a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.search-link:hover{
+    cursor:pointer;
+}
+.search-content {
     display: flex;
     align-items: center;
     border-bottom: .2rem solid var(--grey);
     padding: 1rem 0;
 }
-.search-item figure {
+.search-content figure {
     width: 640px;
 }
 .search-item-right {
     margin: 0 0 0 1rem;
 }
-.search-item .title {
+.search-content .title {
     font-size: var(--font-lg);
     font-weight: bold;
 }
-.search-item .text {
+.search-content .text {
     margin: .2rem 0 0;
     line-height: 1.5;
 }
@@ -1525,5 +1553,3 @@ LARGE SIZE
 
 /*
 ------------------------------------------------------------------------------- */
-
-

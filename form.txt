@@ -1,0 +1,21 @@
+<div class="form-inner">
+                    <label class="label-area" for="name">お名前</label>
+                    <div class="input-area">
+                        [text* your-name id:name]
+                    </div>
+                </div>
+                <div class="form-inner">
+                    <label class="label-area" for="email">メールアドレス</label>
+                    <div class="input-area">
+                        [email* your-email id:email]
+                    </div>
+                </div>
+                <div class="form-inner">
+                    <label class="label-area" for="message">お問い合わせ内容</label>
+                    <div class="input-area">
+                        [textarea* your-message id:message]
+                    </div>
+                </div>
+            <div class="submit-button">
+                [submit "上記内容で送信する"]
+            </div>
