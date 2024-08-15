@@ -510,8 +510,9 @@ FORM
 /*
 SINGLE / PAGE ARTICLE
 ================================================ */
-.single .post-item:hover,
-.page .post-item:hover {
+/* .single .post-item:hover, */
+/* .page .post-item:hover { */
+.single .post-item:hover {
     box-shadow: none;
 }
 .single .post-title,
@@ -803,10 +804,13 @@ textarea {
 }
 input[type="submit"] {
     padding: .75rem 1rem .85rem;
-    background: var(--orange);
+    background: var(--purple);
     border-radius: var(--round-xs);
     color: var(--white);
-    box-shadow: 0 4px 10px rgba(186, 152, 123, 0.6);
+    transition: .3s ease-in-out;
+}
+input[type="submit"]:hover {
+    background: var(--orange);
 }
 
 /*
@@ -1042,6 +1046,7 @@ PAGE GAME
 .game-content div a:hover:after {
     right: 1rem;
 }
+
 /* テーブル */
 .game-content table {
     margin: 3rem auto;
