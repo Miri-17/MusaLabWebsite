@@ -1,0 +1,1847 @@
+@charset 'UTF-8';
+
+/*
+COLORS
+================================================ */
+:root {
+    /* Color */
+    --white: #fff;
+    --black: #000;
+    --dark-grey: #313131;
+    --grey: #666;
+    --light-grey: #ccc;
+    --moon-white: #f6f7f8;
+    /* サイトのメインカラー */
+    --main-blue: #02bbff;
+    --main-green: #02ff00;
+    --main-yellow: #fdd001;
+    --main-red: #ff0005;
+    /* ホバーに関する色 */
+    --purple: #b37dff;
+    --orange: #ffbb74;
+    /* 付箋のようなh2の色 */
+    --extra-light-grey: #f7f7f7;
+    /* パンくず */
+    --pankuzu1: #787878;
+    --pankuzu2: #b4b4b4;
+    
+    /* Font/Space Size */
+    --font-sm: .75rem;
+    --font-md: 1rem;
+    --font-lg: 1.25rem;
+    --font-xl: 1.625rem;
+
+    /* Border Radius Size */
+    --round-xs: 6px;
+    --round-sm: 8px;
+    --round-md: 10px;
+    --round-lg: 50%;
+}
+
+/*
+GENERAL STYLING
+================================================ */
+body {
+    background: var(--moon-white);
+	color: var(--grey);
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/*
+COMMON
+================================================ */
+p {
+    line-height: 1.7;
+}
+img,
+iframe {
+    /*
+    レスポンシブに対応。
+    画像が親要素の幅よりも大きくならないように設定。
+    */
+    max-width: 100%;
+}
+
+/*
+LAYOUT
+================================================ */
+.wrapper {
+    width: 100%;
+    margin: 0 auto; /* wrapperを中央に配置 */
+    padding: 0 1rem; /* 左右に1rem必ず余白を作る */
+}
+
+/*
+HEADER
+================================================ */
+.site-header {
+    background: var(--black);
+    height: 60px;
+    width: 100%;
+    margin: 0;
+    padding: 18px;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+}
+.site-logo {
+    width: 140px;
+}
+.header_empty{
+    /* ヘッダー (60px) の下に20px余白を追加 */
+    height: 80px;
+    width: 100%;
+}
+
+/* Global Navigation */
+.gnav {
+    display: none;
+    white-space: nowrap;
+    background: var(--black);
+    height: 100%;
+    width: 306px;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    right: 0;
+    box-shadow: -10px 0 35px -20px rgb(0 0 0 / 50%);
+}
+.gnav-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 230px;
+    padding: 90px 28px 20px 28px;
+    row-gap: 25px;
+}
+.gnav-link {
+    color: var(--white);
+    padding-bottom: 5px;
+    position: relative;
+    text-decoration: none;
+    opacity: .8;
+    transition-duration: .3s;
+}
+.gnav-link:hover {
+    opacity: 1;
+}
+.main-blue::before {
+    background: var(--main-blue);
+}
+.main-green::before {
+    background: var(--main-green);
+}
+.main-yellow::before {
+    background: var(--main-yellow);
+}
+.main-red::before {
+    background: var(--main-red);
+}
+.gnav-link::before {
+    height: 2px;
+    width: 100%;
+    margin: auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: '';
+    transform-origin: right top;
+    transform: scale(0, 1);
+    transition: transform .3s;
+}
+.gnav-link:hover::before {
+    transform-origin: left top;
+    transform: scale(1, 1);
+}
+
+.btn-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 60px;
+    width: 60px;
+    padding: 21px 16px;
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    appearance: none;
+}
+.btn-menu-line {
+    display: block;
+    background: var(--white);
+    height: 2px;
+    width: 100%;
+    position: relative;
+    left: 0;
+    border-radius: var(--round-xs);
+    transition: all 0.4s;
+}
+.btn-menu-line::before,
+.btn-menu-line::after {
+    display: block;
+    background: var(--white);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border-radius: 4px;
+    content: '';
+    transition: inherit;
+}
+.btn-menu-line::before {
+    top: -8px;
+}
+.btn-menu-line::after {
+    top: 8px;
+}
+#nav-input:checked ~ .btn-menu .btn-menu-line {
+    background: transparent;
+}
+#nav-input:checked ~ .btn-menu .btn-menu-line::before,
+#nav-input:checked ~ .btn-menu .btn-menu-line::after {
+    background: var(--white);
+    top: 0;
+}
+#nav-input:checked ~ .btn-menu .btn-menu-line::before {
+    transform: rotate(45deg);
+}
+#nav-input:checked ~ .btn-menu .btn-menu-line::after {
+    transform: rotate(-45deg);
+}
+#nav-input:checked ~ nav {
+    display: block;
+    animation: 1s fadeIn;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.nav-hidden {
+    display: none;
+}
+
+/* Search */
+.header-search-wrap {
+    display: flex;
+    flex-direction: column;
+    padding: 0 28px 20px 28px;
+}
+#header-search-text{
+    background: var(--white) url("../images/icon-search.svg") no-repeat 14px center;
+    background-size: 30px 30px;
+    border: .2rem solid var(--purple);
+    outline: none;
+    padding: 20px 0 20px 60px;
+    height: 60px;
+    width: 250px;
+    cursor: pointer;
+}
+#header-search-text:focus {
+    border: .2rem solid var(--orange);
+}
+#search-text{
+    background: var(--white) url("../images/icon-search.svg") no-repeat 14px center;
+    background-size: 30px 30px;
+    border: .2rem solid var(--purple);
+    outline: none;
+    padding: 20px 0 20px 60px;
+    height: 60px;
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+#search-text:focus {
+    border: .2rem solid var(--orange);
+}
+
+/* パンくず */
+.bread_crumb {
+	max-width: 960px;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 auto;
+	padding: 14px 0;
+}
+.bread_crumb span {
+	font-size:14px;
+	color: var(--pankuzu1);
+	margin: 0 10px;
+}
+.bread_crumb span:first-child {
+	margin-left: 0px; 
+}
+.bread_crumb span:last-child {
+	margin-right: 0px; 
+}
+.bread_crumb span .current-item {
+	color: var(--pankuzu2);
+}
+
+/*
+SLIDER
+================================================ */
+.slider {
+    /* sliderはヘッダーの真下に配置したいため、ヘッダーの下の余白20pxを削除 */
+    margin-top: -20px;
+}
+.slider img {
+    width: 100%;
+}
+.slider-item img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+/* Arrows */
+.slick-arrow {
+    z-index: 2;
+}
+.slick-prev,
+.slick-next {
+    width: 40px;
+    height: 40px;
+}
+.slick-prev {
+    left: 0;
+}
+.slick-next {
+    right: 0;
+}
+.slider .slick-prev::before,
+.slider .slick-next::before {
+    font-size: 40px;
+    color: var(--orange);
+    opacity: 0;
+    transition: .5s;
+}
+.slider:hover .slick-prev::before,
+.slider:hover .slick-next::before {
+    opacity: 1;
+}
+
+/* Dots */
+.slide-dots {
+    position: relative;
+    text-align: center;
+    margin: -15px 0 0 0;
+}
+.slide-dots li {
+    display: inline-block;
+    margin: 0 12px;
+}
+.slide-dots li button {
+    position: relative;
+    text-indent: -9999px;
+}
+.slide-dots li button::before {
+    content: '';
+    position: absolute;
+    background: var(--light-grey);
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: auto;
+    height: 12px;
+    width: 12px;
+    top: 24px;
+    right: 0;
+    left: 0;
+}
+.slide-dots li.slick-active button::before {
+    background: var(--orange);
+}
+
+/*
+MAIN
+================================================ */
+.main-contents {
+    margin-bottom: 3rem;
+}
+
+/*
+POST LIST
+================================================ */
+.home .post-list,
+.archive .post-list,
+.making-games .post-list,
+.search .post-list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+.post-item {
+    background: var(--white);
+    border-radius: var(--round-md);
+    position: relative;
+}
+.post-item .wp-post-image {
+    border-radius: var(--round-md) var(--round-md) 0 0;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+}
+.post-item:hover {
+    box-shadow: 0 0 10px rgba(0,0,0,.16);
+}
+.post-header {
+    padding: 1rem;
+}
+.post-title {
+    font-size: var(--font-lg);
+    font-weight: bold;
+    line-height: 1.5;
+    margin-bottom: .5rem;
+    /* FIXME Edgeに対応していないらしいため、バグの元になる可能性があります */
+    word-break: break-word;
+}
+.post-description {
+    font-size: var(--font-md);
+    margin-bottom: .5rem;
+    /* FIXME Edgeに対応していないらしいため、バグの元になる可能性があります */
+    word-break: break-word;
+}
+.post-date {
+    color: var(--light-grey);
+    font-size: var(--font-sm);
+    display: block;
+    margin-bottom: .5rem;
+}
+
+/*
+Pagination
+================================================ */
+.pagination {
+    text-align: center;
+}
+.nav-links .page-numbers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.nav-links a.page-numbers ,
+.nav-links .current,
+.nav-links a.prev,
+.nav-links a.next,
+.nav-links .dots {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    background: var(--white);
+    color: var(--purple);
+    border-radius: var(--round-lg);
+    margin-right: 25px;
+    font-size: 12px;
+    font-weight: bold;
+    border: 1px solid var(--purple);
+}
+.nav-links a.page-numbers:hover {
+    color: var(--white);
+    background-color: var(--orange);
+    border-color: var(--orange);
+    border-radius: var(--round-lg);
+}
+.nav-links .current {
+    background: var(--purple);
+    color: var(--white);
+    padding: 0;
+}
+.nav-links a.prev,
+.nav-links a.next {
+    /* ムサラボ紫の濃い色 */
+    border: 1px solid #4d1dab;
+    color: #4d1dab;
+    position: relative;
+}
+.nav-links .next::before,
+.nav-links .prev::after {
+    content: "";
+    display: inline-block;
+    width: 0.5px;
+    height: 40px;
+    background-color: var(--light-grey);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.nav-links .next::before {
+    left: -15px;
+}
+.nav-links .prev::after {
+    right: -15px;
+}
+.nav-links .dots {
+    background: transparent;
+    border: none;
+}
+
+/*
+プラグインWeb Galleryのページネーション
+================================================ */
+#bwg_container1_0 #bwg_container2_0 .tablenav-pages_0 {
+    font-size: var(--font-sm) !important;
+    font-family: 'Noto Sans JP', sans-serif !important;
+    color: var(--purple) !important;
+    margin: 1rem 0 !important;
+}
+/* ページ番号とリンク */
+#bwg_container1_0 #bwg_container2_0 .tablenav-pages_0 a,
+#bwg_container1_0 #bwg_container2_0 .tablenav-pages_0 input.bwg_current_page {
+    width: 50px !important;
+    height: 50px !important;
+    cursor: pointer;
+    font-size: var(--font-sm) !important;
+    font-family: 'Noto Sans JP', sans-serif !important;
+    padding: 5px 10px;
+    margin: 0 2px;
+    border-radius: var(--round-lg) !important;
+}
+#bwg_container1_0 #bwg_container2_0 .tablenav-pages_0 a {
+    color: #4d1dab !important;
+    border: 1px solid #4d1dab !important;
+    background: var(--white) !important;
+}
+/* 現在のページ番号 */
+#bwg_container1_0 #bwg_container2_0 .tablenav-pages_0 input.bwg_current_page {
+    pointer-events: none;
+    color: var(--white) !important;
+    background: var(--purple) !important;
+}
+#bwg_container1_0 #bwg_container2_0 .tablenav-pages_0 a:hover {
+    background: var(--orange) !important;
+    color: var(--white) !important;
+    border-color: var(--orange) !important;
+}
+/* 無効なリンクのスタイル */
+#bwg_container1_0 #bwg_container2_0 .tablenav-pages_0 a.disabled {
+    color: #4d1dab !important;
+    border: 1px solid #4d1dab !important;
+    background: var(--white) !important;
+}
+.pagination-links {
+    width: 100% !important;
+}
+
+/*
+Button
+================================================ */
+.btn-gradient {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+.btn-gradient-border {
+    display: inline-block;
+    background: var(--purple);
+    border-radius: var(--round-md);
+    padding: 3px;
+}
+.btn-gradient-border__text {
+    display: block;
+    background: var(--purple);
+    border-radius: var(--round-sm);
+    padding: .85rem 1rem;
+    color: var(--white);
+}
+.btn-gradient-border:hover {
+    background: linear-gradient(to right, var(--main-blue) 0%, var(--main-green) 29%, var(--main-yellow) 67%, var(--main-red) 100%);
+    transition: .3s;
+}
+.btn-gradient-border:hover .btn-gradient-border__text {
+    background: var(--white);
+    color: var(--grey);
+    transition: .2s;
+}
+
+/*
+PAGE
+================================================ */
+.page-common-title,
+.page-making-games-title,
+.archive-title,
+.page-gallery-title,
+.page-search-title,
+.page-contact-title {
+    text-align: center;
+    font-size: var(--font-lg);
+    font-weight: bold;
+    padding: 0 0 5px;
+    margin-bottom: 1.5rem;
+}
+.page-common-title {
+    border-bottom: 3px solid var(--main-blue);
+}
+.page-making-games-title {
+    border-bottom: 3px solid var(--main-green);
+}
+.archive-title {
+    border-bottom: 3px solid var(--main-yellow);
+}
+.page-gallery-title {
+    border-bottom: 3px solid var(--main-red);
+}
+.page-search-title {
+    border-bottom: 3px solid var(--orange);
+}
+.page-contact-title {
+    border-bottom: 3px solid var(--purple);
+}
+
+.small-title {
+    display: flex;
+    justify-content: center;
+    margin: 3rem 0 1.5rem;
+}
+.small-title h2 {
+    border-bottom: 3px solid var(--main-blue);
+    font-size: var(--font-lg);
+    font-weight: bold;
+    padding: 0 0 5px;
+}
+
+/*
+SINGLE / PAGE ARTICLE
+================================================ */
+.single .post-item:hover {
+    box-shadow: none;
+}
+.single .post-title,
+.page .post-title {
+    font-size: var(--font-lg);
+}
+.single .post-header {
+    padding: 4rem 1rem 1rem;
+}
+.page .post-header {
+    padding: 1rem;
+}
+.single .wp-post-image + .post-header,
+.page .wp-post-image + .post-header {
+    padding-top: 1rem;
+}
+.post-content {
+    padding-bottom: 1rem;
+}
+.page-content a,
+.post-content a {
+    color: var(--purple);
+    text-decoration: underline;
+}
+.page-content a:hover,
+.post-content a:hover {
+    color: var(--orange);
+}
+.post-content h2 {
+    background: var(--extra-light-grey);
+    border-left: solid 6px var(--orange);
+    color: var(--orange);
+    font-size: var(--font-lg);
+    margin: 3rem 0 .5rem;
+    padding: .5rem;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.14);
+}
+
+.page-content h2 {
+    position: relative;
+    align-items: center;
+    font-size: var(--font-lg);
+    color: var(--grey);
+    margin: 3rem 0 .5rem;
+    padding: .5rem .5rem .75rem 3rem;
+}
+.page-content .main-blue {
+    border-bottom: 4px solid var(--main-blue);
+}
+.page-content .main-green {
+    border-bottom: 4px solid var(--main-green);
+}
+.page-content .main-yellow {
+    border-bottom: 4px solid var(--main-yellow);
+}
+.page-content .main-red {
+    border-bottom: 4px solid var(--main-red);
+}
+.page-content .main-blue::before,
+.page-content .main-green::before,
+.page-content .main-yellow::before,
+.page-content .main-red::before {
+    /* gnav内でのbackgroundを打ち消し */
+    background: none;
+
+    content: '';
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    margin-bottom: .1rem;
+}
+.page-content .main-blue::before {
+    background-image: url(../images/button-m.png);
+}
+.page-content .main-green::before {
+    background-image: url(../images/button-a.png);
+}
+.page-content .main-yellow::before {
+    background-image: url(../images/button-k.png);
+}
+.page-content .main-red::before {
+    background-image: url(../images/button-e.png);
+}
+
+.page-content h3,
+.post-content h3 {
+    font-size: var(--font-lg);
+    margin-top: 2rem;
+}
+.page-content h4,
+.page-content h5,
+.page-content h6,
+.post-content h4,
+.post-content h5,
+.post-content h6 {
+    font-weight: bold;
+}
+.page-content h3,
+.page-content h4,
+.page-content h5,
+.page-content h6,
+.page-content p,
+.page-content ul,
+.page-content ol,
+.page-content figure,
+.page-content blockquote,
+.page-content pre,
+.post-content h3,
+.post-content h4,
+.post-content h5,
+.post-content h6,
+.post-content p,
+.post-content ul,
+.post-content ol,
+.post-content figure,
+.post-content blockquote,
+.post-content pre {
+    margin-bottom: 1rem;
+}
+.page-content figcaption,
+.post-content figcaption {
+    font-size: var(--font-sm);
+    text-align: center;
+}
+.page-content img,
+.post-content img {
+    margin-bottom: .5rem;
+    height: auto;
+}
+.post-content .wp-block-image:not(.is-style-rounded) img {
+    border-radius: var(--round-md);
+}
+.page-content ul,
+.page-content ol,
+.post-content ul,
+.post-content ol {
+    padding-left: 2rem;
+}
+.page-content ul,
+.post-content ul {
+    list-style: square;
+}
+.page-content ol,
+.post-content ol {
+    list-style: decimal;
+}
+.page-content li,
+.post-content li {
+    line-height: 1.5;
+}
+.page-content li::marker,
+.post-content li::marker {
+    color: var(--purple);
+}
+.page-content blockquote,
+.post-content blockquote {
+    background: #eee;
+    padding: 1rem 1rem .25rem 2rem;
+    border-radius: var(--round-md);
+    position: relative;
+}
+.page-content blockquote::before,
+.post-content blockquote::before {
+    content: '“';
+    position: absolute;
+    font-size: 3rem;
+    color: var(--light-grey);
+    top: 0;
+    left: 8px;
+}
+.page-content blockquote cite,
+.post-content blockquote cite {
+    margin-bottom: 1.5rem;
+    display: inline-block;
+}
+.post-footer {
+    padding-bottom: 1rem;
+}
+.page-content code,
+.page-content kbd,
+.post-content code,
+.post-content kbd {
+        background: #eee;
+        padding: 3px;
+        border-radius: 3px;
+        margin: 0 3px;
+}
+
+.author-name {
+    margin: 0 1.2rem .5rem 1.2rem;
+}
+.author-name p {
+    text-align: right;
+}
+
+.more-news {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem .5rem 0;
+}
+.another-link {
+    color: var(--purple);
+}
+.another-link:hover {
+    color: var(--orange);
+}
+
+/*
+BLOCK
+================================================ */
+.wp-caption {
+    max-width: 100%;
+}
+a.wp-block-button__link {
+    color: var(--white);
+    text-decoration: none;
+}
+.wp-block-code {
+    font-family: Menlo,Consolas,monaco,monospace;
+    padding: 0.8em 1em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: var(--font-sm);
+    line-height: 1.5;
+}
+.wp-block-code code {
+    background: none;
+}
+.wp-block-table table {
+    border-collapse: collapse;
+    width: 100%;
+}
+.wp-block-table thead {
+    border-bottom: 3px solid;
+}
+.wp-block-table td,
+.wp-block-table th {
+    padding: 0.5em;
+    border: 1px solid;
+    word-break: normal;
+}
+.wp-block-separator {
+    margin: 2rem auto;
+    border-color: var(--light-grey);
+    width: 100px;
+}
+.wp-block-calendar {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+/* YouTube動画中央寄せ */
+.wp-block-embed__wrapper {
+    text-align: center;
+}
+
+/*
+TAG LIST
+================================================ */
+.tags-links li {
+    display: inline-block;
+    font-size: var(--font-sm);
+    border: 1px solid var(--light-grey);
+    border-radius: var(--round-xs);
+    padding: .4rem .5rem .5rem;
+    margin-right: .25rem;
+    margin-bottom: .25rem;
+}
+.tags-links a::before {
+    content: '#';
+    color: var(--light-grey);
+    margin-right: .25rem;
+}
+.tags-links a:hover {
+    color: var(--orange);
+}
+
+/*
+FORM
+================================================ */
+.form-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.form-content p {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+.form-content form {
+    margin-bottom: 1rem;
+}
+.form-inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    margin-bottom: 1rem;
+}
+.label-area {
+    margin-right: 1rem;
+    padding-top: .2rem;
+}
+.input-area {
+    width: 60%;
+}
+.input-area input,
+.input-area textarea {
+    width: 100%;
+}
+.input-area textarea {
+    height: 10rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+    border: 1px solid var(--light-grey);
+    border-radius: var(--round-xs);
+    padding: .5rem;
+}
+.submit-button {
+    display: flex;
+    justify-content: center;
+}
+input[type="submit"] {
+    padding: .75rem 1rem .85rem;
+    background: var(--purple);
+    border-radius: var(--round-xs);
+    color: var(--white);
+    transition: .3s ease-in-out;
+}
+input[type="submit"]:hover {
+    background: var(--orange);
+}
+
+/* Contact Form 7 */
+.wpcf7-spinner {
+	display: none !important;
+}
+
+/*
+COMMENTS
+================================================ */
+.commentlist {
+    margin-bottom: 3rem;
+}
+h3#comments,
+h3#reply-title {
+    font-size: var(--font-lg);
+    border-bottom: 4px double var(--light-grey);
+    padding-bottom: 1rem;
+    margin: 3rem 0 1rem;
+}
+.comment {
+    position: relative;
+    margin-bottom: 2rem;
+}
+.comment .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--round-lg);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.comment-meta {
+    font-size: var(--font-sm);
+    color: var(--light-grey);
+    display: block;
+    margin-bottom: .5rem;
+}
+.comment-author {
+    font-weight: bold;
+    display: block;
+    margin-bottom: .5rem;
+}
+.comment-body {
+    padding-left: 3.5rem;
+}
+.comment-body p a {
+    color: var(--purple);
+    text-decoration: underline;
+}
+
+/* Comment form */
+.comment-form input[type="text"],
+.comment-form input[type="email"],
+.comment-form input[type="url"],
+.comment-form textarea {
+    display: block;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+.comment-form-cookies-consent {
+    margin-bottom: 1rem;
+}
+
+/*
+FOOTER
+================================================ */
+.site-footer {
+    text-align: center;
+    background: var(--black);
+    color: var(--white);
+    margin-top: 2rem;
+    padding: 0 0 3rem;
+}
+.page-top {
+    display: flex;
+    justify-content: flex-end;
+}
+.arrow-up {
+    padding: 5px;
+    height: 60px;
+    width: 60px;
+}
+.icon-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-sm);
+    list-style: none;
+}
+.icon {
+    width: 45px;
+    /* インスタグラムのロゴは周囲にその1/2の余白をつける必要有り */
+    margin: 24px;
+}
+.copyright {
+    font-size: var(--font-sm);
+    color: rgba(255, 255, 255, .8);
+}
+
+/*
+PAGE HISTORY
+================================================ */
+.timeline {
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    overflow: auto;
+}
+.timeline::before {
+	position: absolute;
+	width: 5px;
+	height: 100%;
+	content: '';
+	background: linear-gradient(var(--main-blue) 0%, var(--main-green) 29%, var(--main-yellow) 67%, var(--main-red) 100%);
+}
+.timeline::before {
+    left: 0;
+}
+.timeline h2 {
+	position: relative;
+	text-align: center;
+	background: var(--main-blue);
+    color: var(--white);
+    font-size: var(--font-lg);
+	border-radius: var(--round-sm);
+	clear: both;
+	max-width: 6em;
+	margin: 2em auto 1em;
+	padding: .5rem;
+}
+.timeline ul {
+	max-width: calc(100% - 2em);
+	margin: 0;
+	list-style: none;
+}
+.timeline ul {
+    z-index: 1;
+    padding: 0 0 0 1.5em;
+}
+.timeline li {
+    position: relative;
+	border: solid 1px var(--main-blue);
+	background: var(--white);
+	border-radius: var(--round-sm);
+	margin-bottom: 1em;
+	padding: 1em;
+}
+.timeline li {
+    width: 100%;
+}
+.timeline li::before {
+	display: inline-block;
+    position: absolute;
+	content: '';
+	border-color: transparent var(--white) transparent transparent;
+	top: 12px;
+	left: -14px;
+	height: 0;
+	width: 0;
+	border-style: solid;
+	border-width: 10px 15px 10px 0;
+	z-index: 0;
+}
+.timeline li::after {
+	display: inline-block;
+	position: absolute;
+	content: '';
+	border-color: transparent var(--main-blue) transparent transparent;
+	top: 12px;
+	left: -16px;
+	height: 0;
+	width: 0;
+	border-style: solid;
+	border-width: 10px 15px 10px 0;
+    z-index: -1;
+}
+.timeline li:nth-child(even),
+.timeline li:nth-child(odd) {
+    float: none;
+}
+.timeline li:nth-child(odd):before {
+    border-color: transparent var(--white) transparent transparent;
+    right: auto;
+    left: -14px;
+    border-width: 10px 15px 10px 0;
+}
+.timeline li:nth-child(odd):after {
+	display: inline-block;
+	position: absolute;
+	content: '';
+	height: 0;
+	width: 0;
+	border-style: solid;
+ 	z-index: -1;
+}
+.timeline li:nth-child(odd)::after {
+    border-color: transparent var(--main-blue) transparent transparent;
+    right: auto;
+    left: -16px;
+    border-width: 10px 15px 10px 0;
+}
+.timeline li:nth-of-type(2n+1) {
+	clear: both;
+}
+.timeline li .flag {
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+}
+.timeline li .desc {
+	font-size: var(--font-md);
+	line-height: 1.5em;
+}
+.timeline li .time {
+    color: var(--main-blue);
+    font-size: var(--font-sm);
+	font-weight: bold;
+}
+
+/*
+PAGE MEMBER
+================================================ */
+.grid {
+    display: grid;
+    gap: 26px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    margin-bottom: 50px;
+}
+.member-link {
+    position: relative;
+}
+.member-link a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.member-link:hover{
+    cursor:pointer;
+}
+.member-content {
+    display: flex;
+    flex-direction: column;
+}
+.member-content img {
+    height: 100%;
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+.member-name {
+    text-align: center;
+    font-weight: bold;
+    font-size: var(--font-lg);
+}
+.member-role {
+    text-align: center;
+}
+
+.member-page {
+    margin: 0 auto;
+}
+.member-page .title {
+    text-align: center;
+    font-weight: bold;
+    font-size: var(--font-lg);
+    margin: .5rem 0 1rem;
+}
+#member-image {
+    text-align: center !important;
+    margin-bottom: 1rem;
+}
+
+/*
+PAGE SEARCH
+================================================ */
+.search-title {
+    font-size: var(--font-xl);
+    margin: 1rem 0 .5rem;
+}
+.search-list {
+    border-top: .2rem solid var(--grey);
+    margin: .5rem 0 1.5rem;
+}
+.search-link {
+    position: relative;
+}
+.search-link a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.search-link:hover{
+    cursor:pointer;
+}
+.search-content {
+    display: flex;
+    align-items: center;
+    border-bottom: .2rem solid var(--grey);
+    padding: 1rem 0;
+}
+.search-content figure {
+    width: 40%;
+}
+.search-content figure img {
+    width: 100%;
+    height: 100%;
+    /* レイアウト的には合ったほうが綺麗だが、メンバーが検索結果に出た場合おかしくなるのでコメントアウト */
+    /* aspect-ratio: 16 / 9; */
+    object-fit: cover;
+}
+.search-content .search-item-right {
+    width: 60%;
+    margin: 0 0 0 1rem;
+}
+.search-content .title {
+    font-size: var(--font-lg);
+    font-weight: bold;
+}
+.search-content .text {
+    margin: .2rem 0 0;
+    line-height: 1.5;
+}
+
+/*
+PAGE GAME
+================================================ */
+.game-content .title {
+    position: relative;
+    text-align: center;
+    font-size: var(--font-xl);
+    font-weight: bold;
+    margin: 1rem 0;
+    margin-top: 5rem;
+    padding: 0.25em 0;
+}
+.game-content .title::after {
+    content: "";
+    display: block;
+    background: -webkit-linear-gradient(to right, var(--main-blue) 0%, var(--main-green) 29%, var(--main-yellow) 67%, var(--main-red) 100%);
+    background: linear-gradient(to right, var(--main-blue) 0%, var(--main-green) 29%, var(--main-yellow) 67%, var(--main-red) 100%);
+    height: 4px;
+}
+/*
+p ... 地の文
+h2 ... キャッチフレーズ
+h3 ... 賞の情報
+h4 ... 地の文の大きい字
+h6 ... バージョン情報
+*/
+.game-content p {
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+.game-content h2 {
+    font-size: var(--font-xl);
+    font-weight: bold;
+    margin: 2rem 0 1rem;
+}
+.game-content h3 {
+    font-size: var(--font-xl);
+    font-weight: bold;
+    color: var(--pankuzu1);
+    margin: 1rem 0;
+    position: relative;
+}
+.game-content h3::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 0;
+    transform: translateX(-40px);
+    width: 40px;
+    height: 40px;
+    background-image: url(../images/icon-medal.svg);
+
+    margin-left: 20px;
+    z-index: -1;
+}
+.game-content h4 {
+    font-size: var(--font-lg);
+    font-weight: bold;
+    margin: 2rem 0 .5rem;
+}
+.game-content h6 {
+    font-size: var(--font-sm);
+}
+
+/* ボタン */
+.game-content .wp-block-button {
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+.game-content div a {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    background: var(--main-blue);
+    color: var(--white);
+    font-size: var(--font-lg);
+    border-radius: var(--round-xs);
+    margin: 1rem auto;
+    padding: 1rem 2rem;
+    max-width: 200px;
+    transition: .3s ease-in-out;
+}
+.game-content div a:after {
+    content: "";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 6px;
+    width: 6px;
+    top: 50%;
+    bottom: 0;
+    right: 1.5rem;
+    transition: right .3s;
+    border-top: solid 2px currentColor;
+    border-right: solid 2px currentColor;
+    transform: translateY(-50%) rotate(45deg);
+}
+.game-content div a:hover {
+    background: var(--orange);
+}
+.game-content div a:hover:after {
+    right: 1rem;
+}
+
+/* テーブル */
+.game-content table {
+    margin: 3rem auto;
+    border-collapse: collapse;
+    width: 100%;
+}
+.game-content tr {
+    display:table;
+    border-bottom: 1px solid var(--dark-grey);
+    width: 100%;
+}
+.game-content tr:first-child {
+    border-top: 1px solid var(--dark-grey);
+}
+.game-content td {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 40px 1rem;
+}
+/* 見出し */
+.game-content table td:first-child {
+    display: block;
+    text-align: right;
+    color: var(--grey);
+    font-weight: bold;
+    position: relative;
+    padding: 40px 1rem 40px 80px;
+}
+/* 内容 */
+.game-content table td:last-child {
+    padding: 40px 1rem 40px 40px;
+    width: 60%;
+}
+.game-content table td:first-child::before {
+    content: "";
+    display: block;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: translateY(-50%);
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    z-index: -1;
+}
+/* 必要な容量 */
+.game-content table tr:nth-child(1) td:first-child::before {
+    background-image: url(../images/icon-table01-hard-disk.svg);
+}
+/* プレイ時間 */
+.game-content table tr:nth-child(2) td:first-child::before {
+    background-image: url(../images/icon-table02-sandglass.svg);
+}
+/* プレイ人数 */
+.game-content table tr:nth-child(3) td:first-child::before {
+    background-image: url(../images/icon-table03-team.svg);
+}
+/* 対応機種 */
+.game-content table tr:nth-child(4) td:first-child::before {
+    background-image: url(../images/icon-table04-laptop.svg);
+}
+/* 操作方法 */
+.game-content table tr:nth-child(5) td:first-child::before {
+    background-image: url(../images/icon-table05-game.svg);
+}
+/* ゲームジャンル */
+.game-content table tr:nth-child(6) td:first-child::before {
+    background-image: url(../images/icon-table06-battle.svg);
+}
+/* ターゲット */
+.game-content table tr:nth-child(7) td:first-child::before {
+    background-image: url(../images/icon-table07-target.svg);
+}
+/* 更新日 */
+.game-content table tr:nth-child(8) td:first-child::before {
+    background-image: url(../images/icon-table08-calendar.svg);
+}
+/* 制作責任者 */
+.game-content table tr:nth-child(9) td:first-child::before {
+    background-image: url(../images/icon-table09-director-chair.svg);
+}
+/* グラフィッカー */
+.game-content table tr:nth-child(10) td:first-child::before {
+    background-image: url(../images/icon-table10-palette.svg);
+}
+/* シナリオ */
+.game-content table tr:nth-child(11) td:first-child::before {
+    background-image: url(../images/icon-table11-fountain-pen.svg);
+}
+/* プログラム */
+.game-content table tr:nth-child(12) td:first-child::before {
+    background-image: url(../images/icon-table12-coding.svg);
+}
+/* BGM */
+.game-content table tr:nth-child(13) td:first-child::before {
+    background-image: url(../images/icon-table13-eighth-note.svg);
+}
+/* その他 */
+.game-content table tr:nth-child(14) td:first-child::before {
+    background-image: url(../images/icon-table14-star.svg);
+}
+/* ゲーム詳細テーブルの追加CSSクラス */
+.game-detail-table {
+    border: none !important;
+}
+.game-detail-table td {
+    border: none !important;
+}
+
+/*
+PAGE GAMES / PAGE GALLERY
+================================================ */
+.article-card {
+    position: relative;
+    margin: 1rem 0 4rem;
+}
+.article-card a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.article-card .text {
+    background-color: rgba(255, 255, 255, 0.9);
+    box-sizing: border-box;
+    padding: 1rem;
+    width: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-30%) translateY(20%);
+    box-shadow: 3px 3px 3px var(--purple);
+    transition: .5s;
+}
+.article-card .text:hover {
+    box-shadow: 3px 3px 3px var(--orange);
+}
+.article-card .text .title {
+    font-size: var(--font-lg);
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: .5rem;
+}
+.article-card .image {
+    display: block;
+    max-width: 100%;
+}
+.article-card .read-more {
+    text-align: right;
+}
+.article-card .image img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+/*
+MEDIUM SIZE 1
+================================================ */
+@media(min-width: 600px) {
+    /* LAYOUT  */
+    .wrapper {
+        max-width: 1000px;
+        padding: 0 3rem;
+    }
+
+    /* HEADER */
+    .site-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 20px;
+        height: 90px;
+    }
+    .site-logo {
+        margin-right: 35px;
+        width: 200px;
+    }
+    .header_empty{
+        /* ヘッダー (90px) の下に30px余白を追加 */
+        height: 120px;
+    }
+
+    .btn-menu {
+        height: 90px;
+        width: 90px;
+    }
+    .btn-menu-line::before {
+        top: -12px;
+    }
+    .btn-menu-line::after {
+        top: 12px;
+    }
+
+    /* SLIDER */
+    .slider {
+        /* sliderはヘッダーの真下に配置したいため、ヘッダーの下の余白30pxを削除 */
+        margin-top: -30px;
+    }
+
+    /* POST LIST */
+    .home .post-list,
+    .archive .post-list,
+    .making-games .post-list,
+    .search .post-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* PAGE */
+    .page-common-title,
+    .page-making-games-title,
+    .archive-title,
+    .page-gallery-title,
+    .page-search-title,
+    .page-contact-title {
+        font-size: var(--font-xl);
+        margin-bottom: 2rem;
+    }
+
+    .small-title {
+        margin-bottom: 2rem;
+    }
+
+    /* SINGLE / PAGE ARTICLE */
+    .single .post-header {
+        padding: 4rem 3rem 2rem;
+    }
+    .single .wp-post-image + .post-header,
+    .page .wp-post-image + .post-header {
+        padding-top: 2rem;
+    }
+    .single .post-title {
+        font-size: var(--font-xl);
+    }
+    .page-content h2,
+    .post-content h2 {
+        font-size: var(--font-xl);
+        margin-bottom: 1rem;
+    }
+
+    .page-content .main-blue::before,
+    .page-content .main-green::before,
+    .page-content .main-yellow::before,
+    .page-content .main-red::before {
+        width: 45px;
+        height: 45px;
+    }
+
+    .page-content h3,
+    .post-content h3 {
+        font-size: var(--font-xl);
+        margin-top: 3rem;
+    }
+    .page-content h4,
+    .post-content h4 {
+        font-size: var(--font-lg);
+        margin-top: 3rem;
+    }
+    .page-content h3,
+    .page-content h4,
+    .page-content h5,
+    .page-content h6,
+    .page-content p,
+    .page-content ul,
+    .page-content ol,
+    .page-content figure,
+    .page-content blockquote,
+    .post-content h3,
+    .post-content h4,
+    .post-content h5,
+    .post-content h6,
+    .post-content p,
+    .post-content ul,
+    .post-content ol,
+    .post-content figure,
+    .post-content blockquote {
+        margin-bottom: 1.5rem;
+    }
+    .page-content img,
+    .post-content img {
+        margin-bottom: 1rem;
+    }
+    .page-content blockquote,
+    .post-content blockquote {
+        padding: 1.5rem 1.5rem .25rem 2.5rem;
+    }
+    .page-content blockquote::before,
+    .post-content blockquote::before {
+        top: 2px;
+        left: 10px;
+    }
+    .post-footer {
+        padding-bottom: 3rem;
+    }
+
+    .author-name {
+        margin: 0 3rem .5rem 3rem;
+    }
+
+    /* PAGE HISTORY */
+    .timeline::before {
+        left: 50%;
+    }
+    .timeline ul {
+        padding: 0 0 0 2em;
+    }
+    .timeline li {
+        width: 42%;
+    }
+    .timeline li:nth-child(even) {
+        margin-top: 2em;
+        float: right;
+    }
+    .timeline li:nth-child(odd) {
+        float: left;
+    }
+    .timeline li:nth-child(odd)::before {
+        border-color: transparent transparent transparent var(--white);
+        right: -14px;
+        left: auto;
+        border-width: 10px 0 10px 15px;
+    }
+    .timeline li:nth-child(odd)::after {
+        border-color: transparent transparent transparent var(--main-blue);
+        right: -16px;
+        left: auto;
+        border-width: 10px 0 10px 15px;
+    }
+
+    /* PAGE MEMBER */
+    .member-page {
+        max-width: 80%;
+    }
+
+    /* PAGE SEARCH */
+    .search-list {
+        margin-bottom: 3rem;
+    }
+
+    /* PAGE GAME */
+    .game-content .title {
+        margin: 2rem 0;
+    }
+    .game-content h3::before {
+        margin-left: 0;
+    }
+
+    /* PAGE GAMES / PAGE GALLERY */
+    .article-card .text {
+        transform: translateY(35%);
+        left: 32%;
+    }
+}
+
+/*
+MEDIUM SIZE 2 (ヘッダーの文字が横並びにできる最小サイズ)
+================================================ */
+@media(min-width: 873px) {
+    /* HEADER */
+    /* Global Navigation */
+    .gnav {
+        display: flex !important;
+        position: static; /* 固定位置を解除 */
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        box-shadow: none;
+        justify-content: center;
+    }
+    .gnav-list {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        position: relative;
+        padding: 0;
+        width: auto;
+        row-gap: 0;
+        column-gap: 30px;
+    }
+    .gnav-item {
+        font-size: var(--font-md);
+        font-weight: bold;
+        line-height: 1;
+        letter-spacing: 0.05em;
+    }
+
+    .btn-menu {
+        display: none;
+    }
+
+    /* PAGE MEMBER */
+    .member-page {
+        max-width: 50%;
+    }
+
+    /* PAGE SEARCH */
+    .header-search-wrap {
+        padding: 0 0 0 30px;
+    }
+    #header-search-text{
+        width: 60px;
+    }
+    #header-search-text:focus {
+        width: 250px;
+    }
+
+    /* PAGE GAMES / PAGE GALLERY */
+    .article-card {
+        margin: 1rem 0 3rem;
+    }
+    .article-card .image {
+        width: 80%;
+        max-width: 700px;
+        position: relative;
+        left: 50%;
+        transform: translateX(-60%);
+    }
+    .article-card:nth-of-type(even) .image {
+        transform: translateX(-40%);
+    }
+    .article-card:nth-of-type(even) .text {
+        left: 0%;
+    }
+}
+
+/*
+LARGE SIZE
+================================================ */
+@media(min-width: 1000px){
+    .home .post-list,
+    .archive .post-list,
+    .making-games .post-list,
+    .search .post-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
