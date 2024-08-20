@@ -33,6 +33,18 @@ function theme_setup() {
 }
 add_action('after_setup_theme', 'theme_setup');
 
+function my_setcookie() {
+    setcookie('cookie_name', 'cookie_value', [
+        'expires' => time() + 3600,
+        'path' => '/',
+        'domain' => 'example.com',
+        'secure' => true, // HTTPSのみでクッキーを送信
+        'httponly' => true, // JavaScriptからクッキーをアクセス不可にする
+        'samesite' => 'Lax' // SameSite 属性を Lax に設定
+    ]);
+}
+add_action('get_headr', 'my_setcookie');
+
 function add_additional_class_on_li($classes, $item, $args) {
     if (isset($args->add_li_class)) {
         $classes['class'] = $args->add_li_class;

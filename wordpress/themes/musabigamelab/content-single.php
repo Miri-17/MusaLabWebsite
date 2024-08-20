@@ -21,6 +21,9 @@ else:
                 
                 <footer class="post-footer wrapper">
 <?php the_tags('<div class="tags-links"><ul><li>', '</li><li>', '</li></ul></div>'); ?>
+                    <div class="share-icon">
+                        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-via="MusabiGameLab" data-lang="ja" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    </div>
                 </footer>
             </article>
         </div>

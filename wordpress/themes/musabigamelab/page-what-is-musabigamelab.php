@@ -22,18 +22,18 @@
                 </li>
                 <li>
                     <time class="time">2022年11月28日</time>
-                    <p class="desc">芸術祭で3つのゲームを展示</p>
+                    <p class="desc">芸術祭で<a href="https://musabigamelab.ciao.jp/archives/start-year/year-2022">3つのゲーム</a>を展示</p>
                 </li>
             </ul>
             <h2>2023</h2>
             <ul>
                 <li>
                     <time class="time">2023年10月27日</time>
-                    <p class="desc">芸術祭で8種類のゲームと2種類のゲーム企画書を展示</p>
+                    <p class="desc">芸術祭で<a href="https://musabigamelab.ciao.jp/archives/start-year/year-2023">8種類のゲームと2種類のゲーム企画書</a>を展示</p>
                 </li>
                 <li>
                     <time class="time">2023年12月29日</time>
-                    <p class="desc">2022年に制作されたゲーム「育星霜」が、GC甲子園にて審査員賞を受賞</p>
+                    <p class="desc">2022年に制作されたゲーム<a href="https://musabigamelab.ciao.jp/archives/games/ikuseisou">「育星霜」</a>が、GC甲子園にて審査員賞を受賞</p>
                 </li>
             </ul>
             <h2>2024</h2>

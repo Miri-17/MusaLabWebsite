@@ -41,8 +41,37 @@ wp_nav_menu(
         </div>
     </header>
     <div class="header_empty"></div>
-    
+
+<?php
+$image_ids = [];
+
+if (have_rows('slider_images')):
+    while (have_rows('slider_images')): the_row();
+        for ($i = 1; $i <= 11; $i++):
+            $image_id = get_sub_field('slider_image' . str_pad($i, 2, '0', STR_PAD_LEFT));
+            if ($image_id):
+                $image_ids[] = $image_id;
+            endif;
+        endfor;
+    endwhile;
+endif;
+
+if (!empty($image_ids)):
+?>
+    <div class="slider">
+<?php foreach ($image_ids as $image_id): ?>
+        <div inert>
+            <div class="slider-item">
+                <?php echo wp_get_attachment_image($image_id, 'general-image'); ?>
+            </div>
+        </div>
+<?php endforeach; ?>
+    </div>
+<?php endif; ?>
+
     <main class="main-contents wrapper">
+    
+<?php if (!is_front_page()): ?>
         <div class="bread_crumb">
 <?php
     if (function_exists('bcn_display')):
@@ -50,3 +79,4 @@ wp_nav_menu(
     endif;
 ?>
         </div>
+<?php endif; ?>

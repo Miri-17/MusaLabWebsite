@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php get_header('slider'); ?>
         <div class="page-content">
 <?php
 $common_obj = get_page_by_path('what-is-musabigamelab');
@@ -106,10 +106,12 @@ $post = $gallery_obj;
 setup_postdata($post);
 ?>
             <h2 class="main-red"><?php the_title(); ?></h2>
+            <div class="gallery-excerpt">
 <?php
 echo get_the_excerpt();
 wp_reset_postdata();
 ?>
+            </div>
         </div>
         <div class="btn-gradient">
             <a href="<?php echo esc_url(home_url('gallery')); ?>" class="btn-gradient-border">

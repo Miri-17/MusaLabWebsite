@@ -912,6 +912,12 @@ FORM
 .form-content form {
     margin-bottom: 1rem;
 }
+.form-content a {
+    color: var(--purple);
+}
+.form-content a:hover {
+    color: var(--orange);
+}
 .form-inner {
     display: flex;
     flex-direction: row;
@@ -1185,6 +1191,12 @@ PAGE HISTORY
     color: var(--main-blue);
     font-size: var(--font-sm);
 	font-weight: bold;
+}
+.timeline a {
+    color: var(--purple);
+}
+.timeline a:hover {
+    color: var(--orange);
 }
 
 /*
@@ -1565,6 +1577,16 @@ PAGE GAMES / PAGE GALLERY
     object-fit: cover;
 }
 
+/* front-pageのギャラリー */
+.gallery-excerpt {
+    margin-bottom: 2rem;
+}
+
+/* reCAPTCHA */
+.grecaptcha-badge {
+    visibility: hidden;
+}
+
 /*
 MEDIUM SIZE 1
 ================================================ */
@@ -1845,3 +1867,9 @@ LARGE SIZE
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
+.share-icon {
+    display: flex;
+    justify-content: flex-end;
+}
+

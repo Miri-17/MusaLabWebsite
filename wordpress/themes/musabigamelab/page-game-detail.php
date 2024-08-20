@@ -4,7 +4,7 @@
 Template Name: ゲーム詳細
 Template Post Type: games
 */
-get_header();
+get_header('slider');
 ?>
         <div class="game-content">
             <h2 class="title"><?php the_title(); ?></h2>
@@ -15,6 +15,9 @@ if (have_posts()):
     endwhile;
 endif;
 ?>
+            <div class="share-icon">
+                <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-via="MusabiGameLab" data-lang="ja" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
         </div>
 
 <?php
