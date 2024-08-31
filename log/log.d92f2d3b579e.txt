@@ -1,0 +1,463 @@
+0000.000 (0) Opened log file at time: Sat, 31 Aug 2024 15:30:15 +0000 on https://musabigamelab.ciao.jp
+0000.014 (0) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.24.4 WP: 6.6.1 PHP: 8.3.11 (apache2handler, Linux lit015.phy.lolipop.jp 3.10.0-1160.el7.x86_64 #1 SMP Mon Oct 19 16:18:59 UTC 2020 x86_64) MySQL: 8.0.35 (max packet size=20971520) WPLANG: ja Server: Apache safe_mode: 0 max_execution_time: 120 memory_limit: 300M (used: 66.1M | 69M) multisite: N openssl: OpenSSL 1.0.2k  26 Jan 2017 mcrypt: N LANG: ja_JP.UTF-8 ZipArchive::addFile: Y
+0000.018 (0) Free space on disk containing Updraft's temporary directory: 4661614.5 MB
+0000.024 (0) Tasks: Backup files: 1 (schedule: weekly) Backup DB: 1 (schedule: weekly)
+0000.030 (0) Requesting semaphore lock (fd) (apparently not via scheduler)
+0000.032 (0) Set semaphore last lock (fd) time to 2024-08-31 15:30:15
+0000.033 (0) Semaphore lock (fd) complete
+0000.037 (0) Backup run: resumption=0, nonce=d92f2d3b579e, file_nonce=d92f2d3b579e begun at=1725118215 (0s ago), job type=backup
+0000.037 (0) Scheduling a resumption (1) after 300 seconds (1725118515) in case this run gets aborted
+0000.045 (0) PHP event: code E_DEPRECATED: rtrim(): Passing null to parameter #1 ($string) of type string is deprecated (line 2819, wp-includes/formatting.php)
+0000.046 (0) Checking if we have a zip executable available
+0000.046 (0) Testing: /usr/bin/zip
+0000.067 (0) Output: zip warning: binziptest/test.zip not found or empty
+0000.069 (0) Output: adding: binziptest/subdir1/	(in=0) (out=0) (stored 0%)
+0000.069 (0) Output: adding: binziptest/subdir1/subdir2/	(in=0) (out=0) (stored 0%)
+0000.070 (0) Output: adding: binziptest/subdir1/subdir2/test.html	(in=131) (out=107) (deflated 18%)
+0000.070 (0) Output: total bytes=131, compressed=107 -> 18% savings
+0000.090 (0) Output: adding: binziptest/subdir1/subdir2/test2.html	(in=138) (out=113) (deflated 18%)
+0000.094 (0) Output: total bytes=269, compressed=220 -> 18% savings
+0000.100 (0) Working binary zip found: /usr/bin/zip
+0000.105 (0) Zip engine: found/will use a binary zip: /usr/bin/zip
+0000.105 (0) Creation of backups of directories: beginning
+0000.108 (0) Beginning creation of dump of plugins (split every: 400 MB)
+0000.151 (0) Total entities for the zip file: 647 directories, 5208 files (0 skipped as non-modified), 98.2 MB
+0000.157 (0) Zip: backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-plugins.zip.tmp: 100 files added (on-disk size: 0 KB)
+0000.161 (0) Zip: backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-plugins.zip.tmp: 200 files added (on-disk size: 0 KB)
+0000.164 (0) Zip: backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-plugins.zip.tmp: 300 files added (on-disk size: 0 KB)
+0000.166 (0) Zip: backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-plugins.zip.tmp: 400 files added (on-disk size: 0 KB)
+0000.169 (0) Zip: backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-plugins.zip.tmp: 500 files added (on-disk size: 0 KB)
+0000.171 (0) Zip: backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-plugins.zip.tmp: 600 files added (on-disk size: 0 KB)
+0000.173 (0) Zip: backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-plugins.zip.tmp: 700 files added (on-disk size: 0 KB)
+0000.176 (0) Zip: backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-plugins.zip.tmp: 800 files added (on-disk size: 0 KB)
+0000.178 (0) Zip: backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-plugins.zip.tmp: 900 files added (on-disk size: 0 KB)
+0000.181 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 25 MB added on this batch (25 MB, 5208 files batched, 973 (973) added so far); re-opening (prior size: 0 KB)
+0000.680 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-plugins.zip.tmp: size is now: 12.60 MB
+0000.687 (0) A useful amount of data was added after this amount of zip processing: 1.4 s (normalised: 1.4 s, rate: 18918.9 KB/s)
+0000.695 (0) Performance is good - will increase the amount of data we attempt to batch (time=1.3533198833466, normalised_time=1.3531469615051, max_time=0.69166994094849, data points known=1, old_max_bytes=26214400, new_max_bytes=116237485)
+0000.700 (0) Zip: backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-plugins.zip.tmp: 1000 files added (on-disk size: 12945 KB)
+0000.702 (0) Zip: backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-plugins.zip.tmp: 1100 files added (on-disk size: 12945 KB)
+0000.705 (0) Zip: backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-plugins.zip.tmp: 1200 files added (on-disk size: 12945 KB)
+0000.708 (0) Zip: backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-plugins.zip.tmp: 1300 files added (on-disk size: 12945 KB)
+0000.713 (0) Zip: backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-plugins.zip.tmp: 1400 files added (on-disk size: 12945 KB)
+0000.717 (0) Zip: backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-plugins.zip.tmp: 1500 files added (on-disk size: 12945 KB)
+0000.722 (0) Zip: backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-plugins.zip.tmp: 1600 files added (on-disk size: 12945 KB)
+0000.728 (0) Zip: backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-plugins.zip.tmp: 1700 files added (on-disk size: 12945 KB)
+0000.733 (0) Zip: backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-plugins.zip.tmp: 1800 files added (on-disk size: 12945 KB)
+0000.741 (0) Zip: backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-plugins.zip.tmp: 1900 files added (on-disk size: 12945 KB)
+0000.747 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 1000 files added on this batch (22 MB, 5208 files batched, 1001 (1974) added so far); re-opening (prior size: 12945 KB)
+0001.581 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-plugins.zip.tmp: size is now: 19.20 MB
+0001.593 (0) Zip: backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-plugins.zip.tmp: 2000 files added (on-disk size: 19694.4 KB)
+0001.600 (0) Zip: backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-plugins.zip.tmp: 2100 files added (on-disk size: 19694.4 KB)
+0001.607 (0) Zip: backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-plugins.zip.tmp: 2200 files added (on-disk size: 19694.4 KB)
+0001.614 (0) Zip: backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-plugins.zip.tmp: 2300 files added (on-disk size: 19694.4 KB)
+0001.620 (0) Zip: backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-plugins.zip.tmp: 2400 files added (on-disk size: 19694.4 KB)
+0001.627 (0) Zip: backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-plugins.zip.tmp: 2500 files added (on-disk size: 19694.4 KB)
+0001.631 (0) Zip: backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-plugins.zip.tmp: 2600 files added (on-disk size: 19694.4 KB)
+0001.635 (0) Zip: backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-plugins.zip.tmp: 2700 files added (on-disk size: 19694.4 KB)
+0001.638 (0) Zip: backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-plugins.zip.tmp: 2800 files added (on-disk size: 19694.4 KB)
+0001.640 (0) Zip: backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-plugins.zip.tmp: 2900 files added (on-disk size: 19694.4 KB)
+0001.641 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 1000 files added on this batch (32.4 MB, 5208 files batched, 1001 (2975) added so far); re-opening (prior size: 19694.4 KB)
+0002.756 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-plugins.zip.tmp: size is now: 27.90 MB
+0002.759 (0) Zip: backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-plugins.zip.tmp: 3000 files added (on-disk size: 28600.6 KB)
+0002.763 (0) Zip: backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-plugins.zip.tmp: 3100 files added (on-disk size: 28600.6 KB)
+0002.767 (0) Zip: backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-plugins.zip.tmp: 3200 files added (on-disk size: 28600.6 KB)
+0002.770 (0) Zip: backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-plugins.zip.tmp: 3300 files added (on-disk size: 28600.6 KB)
+0002.773 (0) Zip: backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-plugins.zip.tmp: 3400 files added (on-disk size: 28600.6 KB)
+0002.776 (0) Zip: backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-plugins.zip.tmp: 3500 files added (on-disk size: 28600.6 KB)
+0002.779 (0) Zip: backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-plugins.zip.tmp: 3600 files added (on-disk size: 28600.6 KB)
+0002.781 (0) Zip: backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-plugins.zip.tmp: 3700 files added (on-disk size: 28600.6 KB)
+0002.789 (0) Zip: backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-plugins.zip.tmp: 3800 files added (on-disk size: 28600.6 KB)
+0002.796 (0) Zip: backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-plugins.zip.tmp: 3900 files added (on-disk size: 28600.6 KB)
+0002.798 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 1000 files added on this batch (3.5 MB, 5208 files batched, 1001 (3976) added so far); re-opening (prior size: 28600.6 KB)
+0002.964 (0) Zip: backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-plugins.zip.tmp: 4000 files added (on-disk size: 29932.4 KB)
+0002.965 (0) Zip: backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-plugins.zip.tmp: 4100 files added (on-disk size: 29932.4 KB)
+0002.967 (0) Zip: backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-plugins.zip.tmp: 4200 files added (on-disk size: 29932.4 KB)
+0002.969 (0) Zip: backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-plugins.zip.tmp: 4300 files added (on-disk size: 29932.4 KB)
+0002.970 (0) Zip: backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-plugins.zip.tmp: 4400 files added (on-disk size: 29932.4 KB)
+0002.974 (0) Zip: backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-plugins.zip.tmp: 4500 files added (on-disk size: 29932.4 KB)
+0002.975 (0) Zip: backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-plugins.zip.tmp: 4600 files added (on-disk size: 29932.4 KB)
+0002.977 (0) Zip: backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-plugins.zip.tmp: 4700 files added (on-disk size: 29932.4 KB)
+0002.979 (0) Zip: backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-plugins.zip.tmp: 4800 files added (on-disk size: 29932.4 KB)
+0002.984 (0) Zip: backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-plugins.zip.tmp: 4900 files added (on-disk size: 29932.4 KB)
+0002.988 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 1000 files added on this batch (13.5 MB, 5208 files batched, 1001 (4977) added so far); re-opening (prior size: 29932.4 KB)
+0003.527 (0) Zip: backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-plugins.zip.tmp: 5000 files added (on-disk size: 34233.5 KB)
+0003.530 (0) Zip: backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-plugins.zip.tmp: 5100 files added (on-disk size: 34233.5 KB)
+0003.535 (0) Zip: backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-plugins.zip.tmp: 5200 files added (on-disk size: 34233.5 KB)
+0003.711 (0) Creating zip file manifest (backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-plugins.zip.list-temp.tmp)
+0003.723 (0) Successfully created zip file manifest (size: 478000)
+0004.049 (0) Created plugins zip (0) - 34796.3 KB in 3.9 s (8843.5 KB/s) (sha1: e0b6b035fb30881e36a6bc6d6ff39a355ac7c349, sha256: 1b0040bae5ebb3f84fdc236e5b3c370db04552d5221e855e698964b8699921c1)
+0004.068 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0004.072 (0) No remote despatch: user chose no remote backup service
+0004.077 (0) Recording as successfully uploaded: backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-plugins.zip
+0004.080 (0) Deleting zip manifest (backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-plugins.zip.list.tmp)
+0004.082 (0) Retain: beginning examination of existing backup sets; user setting: retain_files=2, retain_db=2
+0004.085 (0) Number of backup sets in history: 2; groups (db): 1
+0004.085 (0) Examining (for databases) backup set with group_id=0, nonce=9dcf7c802707, datestamp=1725118122 (Aug 31 2024 15:28:42)
+0004.086 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0004.087 (0) Examining (for databases) backup set with group_id=0, nonce=d63d744bc875, datestamp=1725018910 (Aug 30 2024 11:55:10)
+0004.087 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0004.087 (0) Number of backup sets in history: 2; groups (files): 1
+0004.088 (0) Examining (for files) backup set with nonce=9dcf7c802707, datestamp=1725118122 (Aug 31 2024 15:28:42)
+0004.088 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0004.089 (0) Examining (for files) backup set with nonce=d63d744bc875, datestamp=1725018910 (Aug 30 2024 11:55:10)
+0004.089 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0004.089 (0) Retain: saving new backup history (sets now: 2) and finishing retain operation
+0004.096 (0) Beginning creation of dump of themes (split every: 400 MB)
+0004.101 (0) Total entities for the zip file: 20 directories, 201 files (0 skipped as non-modified), 10.6 MB
+0004.105 (0) Zip: backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-themes.zip.tmp: 100 files added (on-disk size: 0 KB)
+0004.110 (0) Zip: backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-themes.zip.tmp: 200 files added (on-disk size: 0 KB)
+0004.326 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-themes.zip.tmp: size is now: 9.90 MB
+0004.336 (0) Creating zip file manifest (backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-themes.zip.list-temp.tmp)
+0004.342 (0) Successfully created zip file manifest (size: 13806)
+0004.437 (0) Created themes zip (0) - 10094 KB in 0.3 s (29809.9 KB/s) (sha1: a6f169a3339c0ad135bc530fcc79077697e1cc04, sha256: 7396cda7b8bda0c61f06bccb1cadc50dbe91693685fe79cce1111cda12f2572f)
+0004.439 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0004.439 (0) No remote despatch: user chose no remote backup service
+0004.440 (0) Recording as successfully uploaded: backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-themes.zip
+0004.441 (0) Deleting zip manifest (backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-themes.zip.list.tmp)
+0004.443 (0) Retain: beginning examination of existing backup sets; user setting: retain_files=2, retain_db=2
+0004.444 (0) Number of backup sets in history: 2; groups (db): 1
+0004.444 (0) Examining (for databases) backup set with group_id=0, nonce=9dcf7c802707, datestamp=1725118122 (Aug 31 2024 15:28:42)
+0004.444 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0004.445 (0) Examining (for databases) backup set with group_id=0, nonce=d63d744bc875, datestamp=1725018910 (Aug 30 2024 11:55:10)
+0004.445 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0004.445 (0) Number of backup sets in history: 2; groups (files): 1
+0004.445 (0) Examining (for files) backup set with nonce=9dcf7c802707, datestamp=1725118122 (Aug 31 2024 15:28:42)
+0004.445 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0004.446 (0) Examining (for files) backup set with nonce=d63d744bc875, datestamp=1725018910 (Aug 30 2024 11:55:10)
+0004.446 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0004.446 (0) Retain: saving new backup history (sets now: 2) and finishing retain operation
+0004.449 (0) Exclusion option setting (uploads): backup*,*backups,backwpup*,wp-clone,snapshots
+0004.450 (0) Looking for candidates to backup in: /home/users/1/ciao.jp-musabigamelab/web/wp-content/uploads
+0004.450 (0) finding files: 2024: adding to list (1)
+0004.451 (0) finding files: wpcf7_uploads: adding to list (2)
+0004.451 (0) finding files: photo-gallery: adding to list (3)
+0004.452 (0) Beginning creation of dump of uploads (split every: 400 MB)
+0004.459 (0) Total entities for the zip file: 8 directories, 766 files (0 skipped as non-modified), 59.4 MB
+0004.460 (0) Zip: backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-uploads.zip.tmp: 100 files added (on-disk size: 0 KB)
+0004.461 (0) Zip: backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-uploads.zip.tmp: 200 files added (on-disk size: 0 KB)
+0004.463 (0) Zip: backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-uploads.zip.tmp: 300 files added (on-disk size: 0 KB)
+0004.464 (0) Zip: backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-uploads.zip.tmp: 400 files added (on-disk size: 0 KB)
+0004.465 (0) Zip: backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-uploads.zip.tmp: 500 files added (on-disk size: 0 KB)
+0004.467 (0) Zip: backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-uploads.zip.tmp: 600 files added (on-disk size: 0 KB)
+0004.468 (0) Zip: backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-uploads.zip.tmp: 700 files added (on-disk size: 0 KB)
+0004.731 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-uploads.zip.tmp: size is now: 59.60 MB
+0004.743 (0) Creating zip file manifest (backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-uploads.zip.list-temp.tmp)
+0004.746 (0) Successfully created zip file manifest (size: 43499)
+0005.334 (0) Created uploads zip (0) - 60999.4 KB in 0.9 s (70115.2 KB/s) (sha1: a273f47c36a958452ae3dc2f8b715c1f88323fc9, sha256: 4c415e19d2fad4930db9dc5cd74f3ea4a6212163dc03becff64dd9a28d351be1)
+0005.363 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0005.369 (0) No remote despatch: user chose no remote backup service
+0005.390 (0) Recording as successfully uploaded: backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-uploads.zip
+0005.412 (0) Deleting zip manifest (backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-uploads.zip.list.tmp)
+0005.437 (0) Retain: beginning examination of existing backup sets; user setting: retain_files=2, retain_db=2
+0005.453 (0) Number of backup sets in history: 2; groups (db): 1
+0005.462 (0) Examining (for databases) backup set with group_id=0, nonce=9dcf7c802707, datestamp=1725118122 (Aug 31 2024 15:28:42)
+0005.462 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0005.470 (0) Examining (for databases) backup set with group_id=0, nonce=d63d744bc875, datestamp=1725018910 (Aug 30 2024 11:55:10)
+0005.470 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0005.470 (0) Number of backup sets in history: 2; groups (files): 1
+0005.476 (0) Examining (for files) backup set with nonce=9dcf7c802707, datestamp=1725118122 (Aug 31 2024 15:28:42)
+0005.476 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0005.483 (0) Examining (for files) backup set with nonce=d63d744bc875, datestamp=1725018910 (Aug 30 2024 11:55:10)
+0005.483 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0005.483 (0) Retain: saving new backup history (sets now: 2) and finishing retain operation
+0005.507 (0) No backup of mu-plugins: excluded by user's options
+0005.520 (0) Beginning backup of other directories found in the content directory (index: 0)
+0005.526 (0) Exclusion option setting (others): upgrade,cache,updraft,backup*,*backups,mysql.sql,debug.log
+0005.532 (0) Looking for candidates to backup in: /home/users/1/ciao.jp-musabigamelab/web/wp-content
+0005.537 (0) finding files: plugins: skipping: this is the plugins directory
+0005.540 (0) finding files: themes: skipping: this is the themes directory
+0005.542 (0) finding files: languages: adding to list (1)
+0005.543 (0) finding files: index.php: adding to list (2)
+0005.545 (0) finding files: uploads: skipping: this is the uploads directory
+0005.547 (0) finding files: upgrade: skipping: excluded by options
+0005.550 (0) finding files: upgrade-temp-backup: adding to list (3)
+0005.553 (0) finding files: jetpack-waf: adding to list (4)
+0005.556 (0) finding files: updraft: skipping: this is the updraft directory
+0005.566 (0) Total entities for the zip file: 7 directories, 273 files (0 skipped as non-modified), 8.1 MB
+0005.571 (0) Zip: backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-others.zip.tmp: 100 files added (on-disk size: 0 KB)
+0005.576 (0) Zip: backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-others.zip.tmp: 200 files added (on-disk size: 0 KB)
+0005.940 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-others.zip.tmp: size is now: 2.30 MB
+0005.943 (0) Creating zip file manifest (backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-others.zip.list-temp.tmp)
+0005.944 (0) Successfully created zip file manifest (size: 20682)
+0005.966 (0) Created others zip (0) - 2325.2 KB in 0.4 s (5736.6 KB/s) (sha1: 926320a5999dd6a5d639861b44f82257ec951ad5, sha256: 449bd3ae5a3aeb27ced1ccdb1d08cea4da78a921606a9a4f2ac794b2bac9e3b0)
+0005.969 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0005.969 (0) No remote despatch: user chose no remote backup service
+0005.969 (0) Recording as successfully uploaded: backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-others.zip
+0005.971 (0) Deleting zip manifest (backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-others.zip.list.tmp)
+0005.972 (0) Retain: beginning examination of existing backup sets; user setting: retain_files=2, retain_db=2
+0005.972 (0) Number of backup sets in history: 2; groups (db): 1
+0005.973 (0) Examining (for databases) backup set with group_id=0, nonce=9dcf7c802707, datestamp=1725118122 (Aug 31 2024 15:28:42)
+0005.973 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0005.973 (0) Examining (for databases) backup set with group_id=0, nonce=d63d744bc875, datestamp=1725018910 (Aug 30 2024 11:55:10)
+0005.973 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0005.974 (0) Number of backup sets in history: 2; groups (files): 1
+0005.974 (0) Examining (for files) backup set with nonce=9dcf7c802707, datestamp=1725118122 (Aug 31 2024 15:28:42)
+0005.974 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0005.974 (0) Examining (for files) backup set with nonce=d63d744bc875, datestamp=1725018910 (Aug 30 2024 11:55:10)
+0005.974 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0005.974 (0) Retain: saving new backup history (sets now: 2) and finishing retain operation
+0005.978 (0) Saving backup status to database (elements: 8)
+0005.981 (0) Beginning creation of database dump (WordPress DB)
+0005.982 (0) SQL compatibility mode is: NO_ENGINE_SUBSTITUTION
+0005.983 (0) Testing potential mysqldump binary: /usr/bin/mysqldump
+0006.044 (0) Output: /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;\n/*!40103 SET TIME_ZONE='+00:00' */;\n/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;\n/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;\n/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;\n/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;\nDROP TABLE IF EXISTS `wp20240818061550_options`;\n/*!40101 SET @saved_cs_client     = @@character_set_client */;\n SET character_set_client = utf8mb (truncated - 1618 bytes total)
+0006.046 (0) Working binary mysqldump found: /usr/bin/mysqldump
+0006.062 (0) Table wp20240818061550_options: Total expected rows (via COUNT): 321
+0006.065 (0) Table is relatively small; fetch_rows will thus be: 500 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0006.232 (0) Table wp20240818061550_options: Rows added in this batch (next record: 3238): 317 (uncompressed bytes in this segment=1261418) in 0.18 seconds
+0006.248 (0) Table wp20240818061550_options: finishing file(s) (2, 200.9 KB)
+0006.281 (0) Table wp20240818061550_users: Total expected rows (via COUNT): 3
+0006.286 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0006.311 (0) Table wp20240818061550_users: Rows added in this batch (next record: 3): 3 (uncompressed bytes in this segment=1805) in 0.05 seconds
+0006.334 (0) Table wp20240818061550_users: finishing file(s) (2, 0.8 KB)
+0006.395 (0) Table wp20240818061550_usermeta: Total expected rows (via COUNT): 126
+0006.401 (0) Table is relatively small; fetch_rows will thus be: 250 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0006.445 (0) Table wp20240818061550_usermeta: Rows added in this batch (next record: 137): 126 (uncompressed bytes in this segment=91240) in 0.09 seconds
+0006.477 (0) Table wp20240818061550_usermeta: finishing file(s) (2, 10.6 KB)
+0006.529 (0) Table wp20240818061550_actionscheduler_actions: Total expected rows (via COUNT): 12
+0006.533 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0006.548 (0) Table wp20240818061550_actionscheduler_actions: Rows added in this batch (next record: 1551): 12 (uncompressed bytes in this segment=5639) in 0.04 seconds
+0006.555 (0) Table wp20240818061550_actionscheduler_actions: finishing file(s) (2, 1.3 KB)
+0006.560 (0) Table wp20240818061550_actionscheduler_claims: Total expected rows (via COUNT): 0
+0006.561 (0) Table wp20240818061550_actionscheduler_claims: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=706) in 0.00 seconds
+0006.563 (0) Table wp20240818061550_actionscheduler_claims: finishing file(s) (2, 0.4 KB)
+0006.567 (0) Table wp20240818061550_actionscheduler_groups: Total expected rows (via COUNT): 3
+0006.568 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0006.569 (0) Table wp20240818061550_actionscheduler_groups: Rows added in this batch (next record: 3): 3 (uncompressed bytes in this segment=819) in 0.00 seconds
+0006.571 (0) Table wp20240818061550_actionscheduler_groups: finishing file(s) (2, 0.4 KB)
+0006.576 (0) Table wp20240818061550_actionscheduler_logs: Total expected rows (via COUNT): 26
+0006.577 (0) Table is relatively small; fetch_rows will thus be: 50 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0006.579 (0) Table wp20240818061550_actionscheduler_logs: Rows added in this batch (next record: 1189): 26 (uncompressed bytes in this segment=3416) in 0.00 seconds
+0006.581 (0) Table wp20240818061550_actionscheduler_logs: finishing file(s) (2, 0.9 KB)
+0006.591 (0) Table wp20240818061550_commentmeta: Total expected rows (via COUNT): 0
+0006.600 (0) Table wp20240818061550_commentmeta: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=778) in 0.02 seconds
+0006.613 (0) Table wp20240818061550_commentmeta: finishing file(s) (2, 0.4 KB)
+0006.634 (0) Table wp20240818061550_comments: Total expected rows (via COUNT): 0
+0006.646 (0) Table wp20240818061550_comments: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1786) in 0.02 seconds
+0006.654 (0) Table wp20240818061550_comments: finishing file(s) (2, 0.5 KB)
+0006.663 (0) Table wp20240818061550_links: Total expected rows (via COUNT): 0
+0006.668 (0) Table wp20240818061550_links: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1382) in 0.01 seconds
+0006.672 (0) Table wp20240818061550_links: finishing file(s) (2, 0.5 KB)
+0006.685 (0) Table wp20240818061550_postmeta: Total expected rows (approximate): 1264
+0006.725 (0) Table wp20240818061550_postmeta: Rows added in this batch (next record: 2268): 1338 (uncompressed bytes in this segment=196084) in 0.05 seconds
+0006.753 (0) Table wp20240818061550_postmeta: finishing file(s) (2, 20.8 KB)
+0006.818 (0) Table wp20240818061550_posts: Total expected rows (via COUNT): 575
+0006.955 (0) Table wp20240818061550_posts: Rows added in this batch (next record: 1182): 575 (uncompressed bytes in this segment=820102) in 0.18 seconds
+0006.960 (0) Table wp20240818061550_posts: finishing file(s) (2, 71.7 KB)
+0006.966 (0) Table wp20240818061550_term_relationships: Total expected rows (approximate): 20
+0006.970 (0) Table wp20240818061550_term_relationships: Rows added in this batch (next record: 100000): 32 (uncompressed bytes in this segment=1227) in 0.01 seconds
+0006.973 (0) Table wp20240818061550_term_relationships: finishing file(s) (2, 0.5 KB)
+0006.980 (0) Table wp20240818061550_term_taxonomy: Total expected rows (via COUNT): 11
+0006.980 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0006.982 (0) Table wp20240818061550_term_taxonomy: Rows added in this batch (next record: 14): 11 (uncompressed bytes in this segment=1705) in 0.01 seconds
+0006.985 (0) Table wp20240818061550_term_taxonomy: finishing file(s) (2, 0.9 KB)
+0006.991 (0) Table wp20240818061550_termmeta: Total expected rows (via COUNT): 6
+0006.992 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0006.993 (0) Table wp20240818061550_termmeta: Rows added in this batch (next record: 8): 6 (uncompressed bytes in this segment=1038) in 0.01 seconds
+0006.996 (0) Table wp20240818061550_termmeta: finishing file(s) (2, 0.5 KB)
+0007.001 (0) Table wp20240818061550_terms: Total expected rows (via COUNT): 11
+0007.001 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0007.003 (0) Table wp20240818061550_terms: Rows added in this batch (next record: 14): 11 (uncompressed bytes in this segment=1274) in 0.00 seconds
+0007.005 (0) Table wp20240818061550_terms: finishing file(s) (2, 0.7 KB)
+0007.010 (0) Table wp20240818061550_aioseo_blc_cache: Total expected rows (via COUNT): 81
+0007.011 (0) Table is relatively small; fetch_rows will thus be: 100 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0007.013 (0) Table wp20240818061550_aioseo_blc_cache: Rows added in this batch (next record: 82): 81 (uncompressed bytes in this segment=10027) in 0.01 seconds
+0007.016 (0) Table wp20240818061550_aioseo_blc_cache: finishing file(s) (2, 1 KB)
+0007.021 (0) Table wp20240818061550_aioseo_blc_link_status: Total expected rows (via COUNT): 48
+0007.022 (0) Table is relatively small; fetch_rows will thus be: 50 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0007.025 (0) Table wp20240818061550_aioseo_blc_link_status: Rows added in this batch (next record: 48): 48 (uncompressed bytes in this segment=11175) in 0.01 seconds
+0007.028 (0) Table wp20240818061550_aioseo_blc_link_status: finishing file(s) (2, 2.8 KB)
+0007.034 (0) Table wp20240818061550_aioseo_blc_links: Total expected rows (via COUNT): 149
+0007.035 (0) Table is relatively small; fetch_rows will thus be: 250 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0007.044 (0) Table wp20240818061550_aioseo_blc_links: Rows added in this batch (next record: 149): 149 (uncompressed bytes in this segment=105559) in 0.01 seconds
+0007.047 (0) Table wp20240818061550_aioseo_blc_links: finishing file(s) (2, 9.3 KB)
+0007.052 (0) Table wp20240818061550_aioseo_blc_notifications: Total expected rows (via COUNT): 0
+0007.054 (0) Table wp20240818061550_aioseo_blc_notifications: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1763) in 0.00 seconds
+0007.057 (0) Table wp20240818061550_aioseo_blc_notifications: finishing file(s) (2, 0.6 KB)
+0007.061 (0) Table wp20240818061550_aioseo_blc_posts: Total expected rows (via COUNT): 80
+0007.061 (0) Table is relatively small; fetch_rows will thus be: 100 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0007.063 (0) Table wp20240818061550_aioseo_blc_posts: Rows added in this batch (next record: 80): 80 (uncompressed bytes in this segment=7278) in 0.00 seconds
+0007.065 (0) Table wp20240818061550_aioseo_blc_posts: finishing file(s) (2, 0.9 KB)
+0007.070 (0) Table wp20240818061550_aioseo_cache: Total expected rows (via COUNT): 5
+0007.070 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0007.073 (0) Table wp20240818061550_aioseo_cache: Rows added in this batch (next record: 5): 5 (uncompressed bytes in this segment=14624) in 0.01 seconds
+0007.075 (0) Table wp20240818061550_aioseo_cache: finishing file(s) (2, 5.2 KB)
+0007.080 (0) Table wp20240818061550_aioseo_crawl_cleanup_blocked_args: Total expected rows (via COUNT): 0
+0007.082 (0) Table wp20240818061550_aioseo_crawl_cleanup_blocked_args: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1123) in 0.00 seconds
+0007.084 (0) Table wp20240818061550_aioseo_crawl_cleanup_blocked_args: finishing file(s) (2, 0.5 KB)
+0007.089 (0) Table wp20240818061550_aioseo_crawl_cleanup_logs: Total expected rows (via COUNT): 0
+0007.090 (0) Table wp20240818061550_aioseo_crawl_cleanup_logs: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=959) in 0.00 seconds
+0007.092 (0) Table wp20240818061550_aioseo_crawl_cleanup_logs: finishing file(s) (2, 0.4 KB)
+0007.097 (0) Table wp20240818061550_aioseo_notifications: Total expected rows (via COUNT): 1
+0007.097 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0007.099 (0) Table wp20240818061550_aioseo_notifications: Rows added in this batch (next record: 2): 1 (uncompressed bytes in this segment=8277) in 0.00 seconds
+0007.102 (0) Table wp20240818061550_aioseo_notifications: finishing file(s) (2, 5.4 KB)
+0007.109 (0) Table wp20240818061550_aioseo_posts: Total expected rows (via COUNT): 183
+0007.110 (0) Table is relatively small; fetch_rows will thus be: 250 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0007.118 (0) Table wp20240818061550_aioseo_posts: Rows added in this batch (next record: 186): 183 (uncompressed bytes in this segment=194988) in 0.01 seconds
+0007.121 (0) Table wp20240818061550_aioseo_posts: finishing file(s) (2, 6.3 KB)
+0007.125 (0) Table wp20240818061550_bwg_album: Total expected rows (via COUNT): 0
+0007.126 (0) Table wp20240818061550_bwg_album: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=942) in 0.00 seconds
+0007.128 (0) Table wp20240818061550_bwg_album: finishing file(s) (2, 0.4 KB)
+0007.132 (0) Table wp20240818061550_bwg_album_gallery: Total expected rows (via COUNT): 0
+0007.132 (0) Table wp20240818061550_bwg_album_gallery: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=650) in 0.00 seconds
+0007.134 (0) Table wp20240818061550_bwg_album_gallery: finishing file(s) (2, 0.4 KB)
+0007.141 (0) Table wp20240818061550_bwg_file_paths: Total expected rows (via COUNT): 65
+0007.142 (0) Table is relatively small; fetch_rows will thus be: 100 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0007.148 (0) Table wp20240818061550_bwg_file_paths: Rows added in this batch (next record: 65): 65 (uncompressed bytes in this segment=16448) in 0.01 seconds
+0007.152 (0) Table wp20240818061550_bwg_file_paths: finishing file(s) (2, 2.1 KB)
+0007.157 (0) Table wp20240818061550_bwg_gallery: Total expected rows (via COUNT): 5
+0007.157 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0007.159 (0) Table wp20240818061550_bwg_gallery: Rows added in this batch (next record: 5): 5 (uncompressed bytes in this segment=2014) in 0.00 seconds
+0007.161 (0) Table wp20240818061550_bwg_gallery: finishing file(s) (2, 0.7 KB)
+0007.166 (0) Table wp20240818061550_bwg_image: Total expected rows (via COUNT): 64
+0007.167 (0) Table is relatively small; fetch_rows will thus be: 100 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0007.170 (0) Table wp20240818061550_bwg_image: Rows added in this batch (next record: 65): 64 (uncompressed bytes in this segment=19515) in 0.01 seconds
+0007.173 (0) Table wp20240818061550_bwg_image: finishing file(s) (2, 3.3 KB)
+0007.178 (0) Table wp20240818061550_bwg_image_comment: Total expected rows (via COUNT): 0
+0007.179 (0) Table wp20240818061550_bwg_image_comment: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=902) in 0.00 seconds
+0007.181 (0) Table wp20240818061550_bwg_image_comment: finishing file(s) (2, 0.4 KB)
+0007.185 (0) Table wp20240818061550_bwg_image_rate: Total expected rows (via COUNT): 0
+0007.186 (0) Table wp20240818061550_bwg_image_rate: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=686) in 0.00 seconds
+0007.188 (0) Table wp20240818061550_bwg_image_rate: finishing file(s) (2, 0.4 KB)
+0007.193 (0) Table wp20240818061550_bwg_image_tag: Total expected rows (via COUNT): 0
+0007.194 (0) Table wp20240818061550_bwg_image_tag: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=593) in 0.00 seconds
+0007.196 (0) Table wp20240818061550_bwg_image_tag: finishing file(s) (2, 0.3 KB)
+0007.200 (0) Table wp20240818061550_bwg_shortcode: Total expected rows (via COUNT): 7
+0007.200 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0007.202 (0) Table wp20240818061550_bwg_shortcode: Rows added in this batch (next record: 7): 7 (uncompressed bytes in this segment=10872) in 0.00 seconds
+0007.204 (0) Table wp20240818061550_bwg_shortcode: finishing file(s) (2, 1.2 KB)
+0007.210 (0) Table wp20240818061550_bwg_theme: Total expected rows (via COUNT): 2
+0007.210 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0007.212 (0) Table wp20240818061550_bwg_theme: Rows added in this batch (next record: 2): 2 (uncompressed bytes in this segment=41609) in 0.01 seconds
+0007.215 (0) Table wp20240818061550_bwg_theme: finishing file(s) (2, 4.5 KB)
+0007.216 (0) PHP event: code E_WARNING: filemtime(): stat failed for /home/users/1/ciao.jp-musabigamelab/web/wp-content/updraft/backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db.gz (line 1925, wp-content/plugins/updraftplus/backup.php)
+0007.216 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db-table-wp20240818061550_options.table.tmpr3239.gz (1/36/fopen): adding to final database dump
+0007.218 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db-table-wp20240818061550_options.table.gz (2/36/fopen): adding to final database dump
+0007.219 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db-table-wp20240818061550_users.table.tmpr4.gz (3/36/fopen): adding to final database dump
+0007.219 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db-table-wp20240818061550_users.table.gz (4/36/fopen): adding to final database dump
+0007.220 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db-table-wp20240818061550_usermeta.table.tmpr138.gz (5/36/fopen): adding to final database dump
+0007.220 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db-table-wp20240818061550_usermeta.table.gz (6/36/fopen): adding to final database dump
+0007.220 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db-table-wp20240818061550_actionscheduler_actions.table.tmpr1552.gz (7/36/fopen): adding to final database dump
+0007.221 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db-table-wp20240818061550_actionscheduler_actions.table.gz (8/36/fopen): adding to final database dump
+0007.221 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db-table-wp20240818061550_actionscheduler_claims.table.tmpr0.gz (9/36/fopen): adding to final database dump
+0007.221 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db-table-wp20240818061550_actionscheduler_claims.table.gz (10/36/fopen): adding to final database dump
+0007.222 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db-table-wp20240818061550_actionscheduler_groups.table.tmpr4.gz (11/36/fopen): adding to final database dump
+0007.222 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db-table-wp20240818061550_actionscheduler_groups.table.gz (12/36/fopen): adding to final database dump
+0007.223 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db-table-wp20240818061550_actionscheduler_logs.table.tmpr1190.gz (13/36/fopen): adding to final database dump
+0007.223 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db-table-wp20240818061550_actionscheduler_logs.table.gz (14/36/fopen): adding to final database dump
+0007.223 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db-table-wp20240818061550_commentmeta.table.tmpr0.gz (15/36/fopen): adding to final database dump
+0007.224 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db-table-wp20240818061550_commentmeta.table.gz (16/36/fopen): adding to final database dump
+0007.224 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db-table-wp20240818061550_comments.table.tmpr0.gz (17/36/fopen): adding to final database dump
+0007.224 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db-table-wp20240818061550_comments.table.gz (18/36/fopen): adding to final database dump
+0007.225 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db-table-wp20240818061550_links.table.tmpr0.gz (19/36/fopen): adding to final database dump
+0007.225 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db-table-wp20240818061550_links.table.gz (20/36/fopen): adding to final database dump
+0007.226 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db-table-wp20240818061550_postmeta.table.tmpr2269.gz (21/36/fopen): adding to final database dump
+0007.226 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db-table-wp20240818061550_postmeta.table.gz (22/36/fopen): adding to final database dump
+0007.227 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db-table-wp20240818061550_posts.table.tmpr1183.gz (23/36/fopen): adding to final database dump
+0007.228 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db-table-wp20240818061550_posts.table.gz (24/36/fopen): adding to final database dump
+0007.228 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db-table-wp20240818061550_term_relationships.table.tmpr100001.gz (25/36/fopen): adding to final database dump
+0007.229 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db-table-wp20240818061550_term_relationships.table.gz (26/36/fopen): adding to final database dump
+0007.229 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db-table-wp20240818061550_term_taxonomy.table.tmpr15.gz (27/36/fopen): adding to final database dump
+0007.230 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db-table-wp20240818061550_term_taxonomy.table.gz (28/36/fopen): adding to final database dump
+0007.230 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db-table-wp20240818061550_termmeta.table.tmpr9.gz (29/36/fopen): adding to final database dump
+0007.231 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db-table-wp20240818061550_termmeta.table.gz (30/36/fopen): adding to final database dump
+0007.231 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db-table-wp20240818061550_terms.table.tmpr15.gz (31/36/fopen): adding to final database dump
+0007.231 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db-table-wp20240818061550_terms.table.gz (32/36/fopen): adding to final database dump
+0007.232 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db-table-wp20240818061550_aioseo_blc_cache.table.tmpr83.gz (33/36/fopen): adding to final database dump
+0007.232 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db-table-wp20240818061550_aioseo_blc_cache.table.gz (34/36/fopen): adding to final database dump
+0007.232 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db-table-wp20240818061550_aioseo_blc_link_status.table.tmpr49.gz (35/36/fopen): adding to final database dump
+0007.233 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db-table-wp20240818061550_aioseo_blc_link_status.table.gz (36/36/fopen): adding to final database dump
+0007.233 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db-table-wp20240818061550_aioseo_blc_links.table.tmpr150.gz (37/36/fopen): adding to final database dump
+0007.234 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db-table-wp20240818061550_aioseo_blc_links.table.gz (38/36/fopen): adding to final database dump
+0007.234 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db-table-wp20240818061550_aioseo_blc_notifications.table.tmpr0.gz (39/36/fopen): adding to final database dump
+0007.235 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db-table-wp20240818061550_aioseo_blc_notifications.table.gz (40/36/fopen): adding to final database dump
+0007.235 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db-table-wp20240818061550_aioseo_blc_posts.table.tmpr81.gz (41/36/fopen): adding to final database dump
+0007.236 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db-table-wp20240818061550_aioseo_blc_posts.table.gz (42/36/fopen): adding to final database dump
+0007.236 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db-table-wp20240818061550_aioseo_cache.table.tmpr6.gz (43/36/fopen): adding to final database dump
+0007.237 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db-table-wp20240818061550_aioseo_cache.table.gz (44/36/fopen): adding to final database dump
+0007.237 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db-table-wp20240818061550_aioseo_crawl_cleanup_blocked_args.table.tmpr0.gz (45/36/fopen): adding to final database dump
+0007.237 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db-table-wp20240818061550_aioseo_crawl_cleanup_blocked_args.table.gz (46/36/fopen): adding to final database dump
+0007.238 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db-table-wp20240818061550_aioseo_crawl_cleanup_logs.table.tmpr0.gz (47/36/fopen): adding to final database dump
+0007.238 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db-table-wp20240818061550_aioseo_crawl_cleanup_logs.table.gz (48/36/fopen): adding to final database dump
+0007.238 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db-table-wp20240818061550_aioseo_notifications.table.tmpr3.gz (49/36/fopen): adding to final database dump
+0007.239 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db-table-wp20240818061550_aioseo_notifications.table.gz (50/36/fopen): adding to final database dump
+0007.239 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db-table-wp20240818061550_aioseo_posts.table.tmpr187.gz (51/36/fopen): adding to final database dump
+0007.240 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db-table-wp20240818061550_aioseo_posts.table.gz (52/36/fopen): adding to final database dump
+0007.240 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db-table-wp20240818061550_bwg_album.table.tmpr0.gz (53/36/fopen): adding to final database dump
+0007.241 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db-table-wp20240818061550_bwg_album.table.gz (54/36/fopen): adding to final database dump
+0007.241 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db-table-wp20240818061550_bwg_album_gallery.table.tmpr0.gz (55/36/fopen): adding to final database dump
+0007.241 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db-table-wp20240818061550_bwg_album_gallery.table.gz (56/36/fopen): adding to final database dump
+0007.242 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db-table-wp20240818061550_bwg_file_paths.table.tmpr66.gz (57/36/fopen): adding to final database dump
+0007.242 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db-table-wp20240818061550_bwg_file_paths.table.gz (58/36/fopen): adding to final database dump
+0007.242 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db-table-wp20240818061550_bwg_gallery.table.tmpr6.gz (59/36/fopen): adding to final database dump
+0007.243 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db-table-wp20240818061550_bwg_gallery.table.gz (60/36/fopen): adding to final database dump
+0007.243 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db-table-wp20240818061550_bwg_image.table.tmpr66.gz (61/36/fopen): adding to final database dump
+0007.244 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db-table-wp20240818061550_bwg_image.table.gz (62/36/fopen): adding to final database dump
+0007.244 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db-table-wp20240818061550_bwg_image_comment.table.tmpr0.gz (63/36/fopen): adding to final database dump
+0007.245 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db-table-wp20240818061550_bwg_image_comment.table.gz (64/36/fopen): adding to final database dump
+0007.245 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db-table-wp20240818061550_bwg_image_rate.table.tmpr0.gz (65/36/fopen): adding to final database dump
+0007.245 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db-table-wp20240818061550_bwg_image_rate.table.gz (66/36/fopen): adding to final database dump
+0007.246 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db-table-wp20240818061550_bwg_image_tag.table.tmpr0.gz (67/36/fopen): adding to final database dump
+0007.246 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db-table-wp20240818061550_bwg_image_tag.table.gz (68/36/fopen): adding to final database dump
+0007.246 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db-table-wp20240818061550_bwg_shortcode.table.tmpr8.gz (69/36/fopen): adding to final database dump
+0007.247 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db-table-wp20240818061550_bwg_shortcode.table.gz (70/36/fopen): adding to final database dump
+0007.247 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db-table-wp20240818061550_bwg_theme.table.tmpr3.gz (71/36/fopen): adding to final database dump
+0007.248 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db-table-wp20240818061550_bwg_theme.table.gz (72/36/fopen): adding to final database dump
+0007.252 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db.gz: finished writing out complete database file (357.2 KB)
+0007.258 (0) Total database tables backed up: 36 (backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db.gz, size: 365941, sha1: f2e9417a4ccfff12a2cafa270f7cd44d76c54ccf, sha256: 2cc2c0ed51efa7a3c3e9eeecbe6eadd6ce755a676dc8c8c1dc18b8b060a26b7c)
+0007.263 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-plugins.zip: plugins: This file has already been successfully uploaded
+0007.263 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-themes.zip: themes: This file has already been successfully uploaded
+0007.264 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-uploads.zip: uploads: This file has already been successfully uploaded
+0007.264 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-others.zip: others: This file has already been successfully uploaded
+0007.264 (0) backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db.gz: db: This file has not yet been successfully uploaded: will queue
+0007.265 (0) Saving backup history. Total backup size: 106 MB
+0007.267 (0) Requesting upload of the files that have not yet been successfully uploaded (1)
+0007.268 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0007.269 (0) No remote despatch: user chose no remote backup service
+0007.269 (0) Recording as successfully uploaded: backup_2024-09-01-0030_musabigamelabciaojp_d92f2d3b579e-db.gz
+0007.271 (0) Retain: beginning examination of existing backup sets; user setting: retain_files=2, retain_db=2
+0007.272 (0) Number of backup sets in history: 3; groups (db): 1
+0007.272 (0) Examining (for databases) backup set with group_id=0, nonce=d92f2d3b579e, datestamp=1725118215 (Aug 31 2024 15:30:15)
+0007.272 (0) This backup set is the backup set just made, so will not be deleted.
+0007.272 (0) Examining (for databases) backup set with group_id=0, nonce=9dcf7c802707, datestamp=1725118122 (Aug 31 2024 15:28:42)
+0007.272 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0007.273 (0) Examining (for databases) backup set with group_id=0, nonce=d63d744bc875, datestamp=1725018910 (Aug 30 2024 11:55:10)
+0007.273 (0) 1725018910: db: this set includes a database (backup_2024-08-30-2055_musabigamelabciaojp_d63d744bc875-db.gz); db count is now 2
+0007.273 (0) 1725018910: db: over retain limit (2); will delete this database
+0007.273 (0) Delete file: backup_2024-08-30-2055_musabigamelabciaojp_d63d744bc875-db.gz, service=none
+0007.273 (0) Deleting local copy (backup_2024-08-30-2055_musabigamelabciaojp_d63d744bc875-db.gz)
+0007.274 (0) This backup set remains non-empty (f=1/d=0); will retain in history
+0007.275 (0) Number of backup sets in history: 3; groups (files): 1
+0007.275 (0) Examining (for files) backup set with nonce=d92f2d3b579e, datestamp=1725118215 (Aug 31 2024 15:30:15)
+0007.275 (0) This backup set is the backup set just made, so will not be deleted.
+0007.275 (0) This backup set is the backup set just made, so will not be deleted.
+0007.275 (0) This backup set is the backup set just made, so will not be deleted.
+0007.275 (0) This backup set is the backup set just made, so will not be deleted.
+0007.275 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0007.275 (0) Examining (for files) backup set with nonce=9dcf7c802707, datestamp=1725118122 (Aug 31 2024 15:28:42)
+0007.275 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0007.276 (0) Examining (for files) backup set with nonce=d63d744bc875, datestamp=1725018910 (Aug 30 2024 11:55:10)
+0007.276 (0) plugins: over retain limit (2); will delete this file entity
+0007.276 (0) themes: over retain limit (2); will delete this file entity
+0007.276 (0) uploads: over retain limit (2); will delete this file entity
+0007.276 (0) others: over retain limit (2); will delete this file entity
+0007.276 (0) Delete file: backup_2024-08-30-2055_musabigamelabciaojp_d63d744bc875-plugins.zip, service=none
+0007.276 (0) Deleting local copy (backup_2024-08-30-2055_musabigamelabciaojp_d63d744bc875-plugins.zip)
+0007.283 (0) Delete file: backup_2024-08-30-2055_musabigamelabciaojp_d63d744bc875-themes.zip, service=none
+0007.285 (0) Deleting local copy (backup_2024-08-30-2055_musabigamelabciaojp_d63d744bc875-themes.zip)
+0007.287 (0) Delete file: backup_2024-08-30-2055_musabigamelabciaojp_d63d744bc875-uploads.zip, service=none
+0007.288 (0) Deleting local copy (backup_2024-08-30-2055_musabigamelabciaojp_d63d744bc875-uploads.zip)
+0007.300 (0) Delete file: backup_2024-08-30-2055_musabigamelabciaojp_d63d744bc875-others.zip, service=none
+0007.300 (0) Deleting local copy (backup_2024-08-30-2055_musabigamelabciaojp_d63d744bc875-others.zip)
+0007.302 (0) This backup set is now empty; will remove from history
+0007.302 (0) Deleting log file (log.d63d744bc875.txt)
+0007.303 (0) Retain: saving new backup history (sets now: 2) and finishing retain operation
+0007.305 (0) Resume backup (d92f2d3b579e, 0): finish run
+0007.306 (0) Decremented the semaphore (fd) by 1
+0007.306 (0) Semaphore (fd) unlocked
+0007.307 (0) There were no errors in the uploads, so the 'resume' event (1) is being unscheduled
+0007.309 (0) The backup succeeded and is now complete
+0007.309 (0) No email will/can be sent - the user has not configured an email address.
+0007.310 (0) バックアップは成功し、完了しました
