@@ -1,7 +1,6 @@
 <?php
 function my_enqueue_scripts() {
     $uri = esc_url(get_template_directory_uri());
-    // wp_enqueue_style('reset-style', 'https://unpkg.com/destyle.css@2.0.2/destyle.css');
     wp_enqueue_style('reset-style', $uri . '/assets/css/destyle.css', []);
     wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
     wp_enqueue_style('slick-theme', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.min.css');
