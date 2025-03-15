@@ -39,6 +39,7 @@
 │   ├── archive.html
 │   ├── assets
 │   │   ├── css
+│   │   │   ├── destyle.css
 │   │   │   └── styles.css
 │   │   ├── images
 │   │   │   ├── 404.jpg
@@ -98,6 +99,7 @@
     │       ├── archive.php
     │       ├── assets
     │       │   ├── css
+    │       │   │   ├── destyle.css
     │       │   │   └── styles.css
     │       │   ├── images
     │       │   │   ├── 404.jpg
